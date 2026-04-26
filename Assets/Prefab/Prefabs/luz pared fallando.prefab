@@ -43,9 +43,9 @@ Light:
   m_Enabled: 1
   serializedVersion: 12
   m_Type: 2
-  m_Color: {r: 0.5568628, g: 0.3882353, b: 0.19607843, a: 1}
-  m_Intensity: 1
-  m_Range: 10
+  m_Color: {r: 1, g: 0.5326086, b: 0, a: 1}
+  m_Intensity: 10
+  m_Range: 20
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize2D: {x: 0.5, y: 0.5}
@@ -252,15 +252,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2925808535405668194, guid: ec23cfef7e659f443a385faab6ed711d, type: 3}
       propertyPath: m_LocalScale.x
-      value: 8.604941
+      value: 4.041483
       objectReference: {fileID: 0}
     - target: {fileID: 2925808535405668194, guid: ec23cfef7e659f443a385faab6ed711d, type: 3}
       propertyPath: m_LocalScale.y
-      value: 8.604941
+      value: 4.041483
       objectReference: {fileID: 0}
     - target: {fileID: 2925808535405668194, guid: ec23cfef7e659f443a385faab6ed711d, type: 3}
       propertyPath: m_LocalScale.z
-      value: 8.604941
+      value: 4.041483
       objectReference: {fileID: 0}
     - target: {fileID: 2925808535405668194, guid: ec23cfef7e659f443a385faab6ed711d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -435,6 +435,22 @@ PrefabInstance:
     - target: {fileID: 7873962659141511876, guid: 995329229cbbfaf48ae6c59acbe949a7, type: 3}
       propertyPath: lengthInSec
       value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7873962659141511876, guid: 995329229cbbfaf48ae6c59acbe949a7, type: 3}
+      propertyPath: CollisionModule.type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7873962659141511876, guid: 995329229cbbfaf48ae6c59acbe949a7, type: 3}
+      propertyPath: CollisionModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7873962659141511876, guid: 995329229cbbfaf48ae6c59acbe949a7, type: 3}
+      propertyPath: CollisionModule.m_Dampen.scalar
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7873962659141511876, guid: 995329229cbbfaf48ae6c59acbe949a7, type: 3}
+      propertyPath: InitialModule.gravityModifier.scalar
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
