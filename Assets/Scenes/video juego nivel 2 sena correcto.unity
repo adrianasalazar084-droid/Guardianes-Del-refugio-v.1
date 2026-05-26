@@ -10143,7 +10143,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 20698304}
+  m_Mesh: {fileID: 904774204}
 --- !u!33 &401316798
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -13126,10 +13126,10 @@ MonoBehaviour:
         z: 7.2501564
       Rotation:
         value:
-          x: 0.1147677
-          y: 0.24609454
-          z: -0.0653194
-          w: 0.9602079
+          x: 0.11476771
+          y: 0.24609455
+          z: -0.06531941
+          w: 0.96020794
     - Position:
         x: -141.53
         y: 14.85
@@ -19180,15 +19180,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f973b8cee8357334a9f71733cf1a328c, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f973b8cee8357334a9f71733cf1a328c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f973b8cee8357334a9f71733cf1a328c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f973b8cee8357334a9f71733cf1a328c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -19226,6 +19226,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: f973b8cee8357334a9f71733cf1a328c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1264988607}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: f973b8cee8357334a9f71733cf1a328c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1900449222}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f973b8cee8357334a9f71733cf1a328c, type: 3}
       insertIndex: -1
@@ -19306,6 +19309,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::LogicaKobu
   x: 0
   y: 0
+  rb: {fileID: 669002008}
+  fuerzaDeSalto: 8
+  puedoSaltar: 0
 --- !u!4 &669002012 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f973b8cee8357334a9f71733cf1a328c, type: 3}
@@ -84388,6 +84394,75 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!1 &1900449221
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1900449222}
+  - component: {fileID: 1900449224}
+  - component: {fileID: 1900449223}
+  m_Layer: 0
+  m_Name: Pies
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1900449222
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1900449221}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 669002012}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1900449223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1900449221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09de13017278c4843bed5332d508b862, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::LogicaPies
+  logicakobu: {fileID: 669002010}
+--- !u!136 &1900449224
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1900449221}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 2.7221959
+  m_Height: 7.3578324
+  m_Direction: 1
+  m_Center: {x: 0, y: 2.3734019, z: 0.22005937}
 --- !u!1001 &1904803275
 PrefabInstance:
   m_ObjectHideFlags: 0
