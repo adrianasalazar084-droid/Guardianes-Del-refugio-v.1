@@ -13,6 +13,8 @@ public class LogicaKobu : MonoBehaviour
     public float fuerzaDeSalto = 8f;
     public bool puedoSaltar;
 
+    public bool estoyAtacando;
+
     void Start()
     {
         puedoSaltar = false;
@@ -23,30 +25,49 @@ public class LogicaKobu : MonoBehaviour
 
     void FixedUpdate()
     {
-        transform.Rotate(0, x * Time.deltaTime * velocidadRotacion, 0);
-        transform.Translate(0, 0, y * Time.deltaTime * velocidad);
+        if (!estoyAtacando)
+        {
+            transform.Rotate(0, x * Time.deltaTime * velocidadRotacion, 0);
+            transform.Translate(0, 0, y * Time.deltaTime * velocidad);
+        }
     }
 
-
-    void Update()
+    private void Update()
     {
         x = Input.GetAxis("Horizontal");
         y = Input.GetAxis("Vertical");
 
+        if (Input.GetKeyDown(KeyCode.Mouse0) && !estoyAtacando)
+        {
+            anim.SetTrigger("golpe");
+            estoyAtacando = true;
+        }
+    
 
-
-
-        anim.SetFloat("VelX", x);
-        anim.SetFloat("VelY", y);
+        if (!estoyAtacando)
+        {
+            anim.SetFloat("VelX", x);
+            anim.SetFloat("VelY", y);
+        }
+        else
+        {
+            anim.SetFloat("VelX", 0);
+            anim.SetFloat("VelY", 0);
+        }
 
         if (puedoSaltar)
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                anim.SetBool("Salto", true);
-                rb.AddForce(new Vector3(0, fuerzaDeSalto, 0), ForceMode.Impulse);
 
-            }
+        {
+                if (!estoyAtacando)
+                {
+                    if (Input.GetKeyDown(KeyCode.Space))
+                    {
+                        anim.SetBool("Salto", true);
+                        rb.AddForce(new Vector3(0, fuerzaDeSalto, 0), ForceMode.Impulse);
+
+                    }
+                }
+         
             anim.SetBool("TocoSuelo", true);
 
         }
@@ -56,9 +77,16 @@ public class LogicaKobu : MonoBehaviour
         }
 
     }
+
     public void EstoyCayendo()
     {
         anim.SetBool("TocoSuelo", false);
         anim.SetBool("Salto", false);
+    }
+
+  
+    public void DejaDeGolpear()
+    {
+        estoyAtacando = false;
     }
 }
