@@ -19312,6 +19312,7 @@ MonoBehaviour:
   rb: {fileID: 669002008}
   fuerzaDeSalto: 8
   puedoSaltar: 0
+  estoyAtacando: 0
 --- !u!4 &669002012 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f973b8cee8357334a9f71733cf1a328c, type: 3}
