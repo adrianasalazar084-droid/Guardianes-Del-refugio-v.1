@@ -13126,10 +13126,10 @@ MonoBehaviour:
         z: 7.2501564
       Rotation:
         value:
-          x: 0.114767715
-          y: 0.24609458
-          z: -0.06531941
-          w: 0.960208
+          x: 0.1147677
+          y: 0.24609454
+          z: -0.0653194
+          w: 0.9602079
     - Position:
         x: -141.53
         y: 14.85
@@ -19239,6 +19239,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f973b8cee8357334a9f71733cf1a328c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 669002010}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f973b8cee8357334a9f71733cf1a328c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 669002013}
   m_SourcePrefab: {fileID: 100100000, guid: f973b8cee8357334a9f71733cf1a328c, type: 3}
 --- !u!1 &669002007 stripped
 GameObject:
@@ -19312,12 +19315,24 @@ MonoBehaviour:
   rb: {fileID: 669002008}
   fuerzaDeSalto: 8
   puedoSaltar: 0
-  estoyAtacando: 0
 --- !u!4 &669002012 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f973b8cee8357334a9f71733cf1a328c, type: 3}
   m_PrefabInstance: {fileID: 669002006}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &669002013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669002007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07524ead0678ea145a28c7924e504616, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  estoyAtacando: 0
 --- !u!1001 &679527185
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -89783,6 +89798,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 329687720}
+  - {fileID: 669002006}
   - {fileID: 293214428}
   - {fileID: 1090237374}
   - {fileID: 1814754441}
@@ -89799,4 +89815,3 @@ SceneRoots:
   - {fileID: 809707054}
   - {fileID: 3854616486850145989}
   - {fileID: 618367410}
-  - {fileID: 669002006}
