@@ -55,5 +55,65 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ccdb0f8055956d44abc44b5853940803, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2816420303303805995}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ccdb0f8055956d44abc44b5853940803, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5660257591036262999}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: ccdb0f8055956d44abc44b5853940803, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -6801151989757225457}
   m_SourcePrefab: {fileID: 100100000, guid: ccdb0f8055956d44abc44b5853940803, type: 3}
+--- !u!1 &8964501913915618880 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: ccdb0f8055956d44abc44b5853940803, type: 3}
+  m_PrefabInstance: {fileID: 8118062887256378129}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2816420303303805995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8964501913915618880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8b4302e6345f264190703ff4d21a5de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RecogerLlave
+--- !u!65 &5660257591036262999
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8964501913915618880}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.50479126, y: 0.1279526, z: 1.0060427}
+  m_Center: {x: 0, y: 0, z: 0.50302136}
+--- !u!114 &-6801151989757225457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8964501913915618880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d8177c451daad145a9d43c222c1a01d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SoltarLlave
+  llavePrefab: {fileID: 8964501913915618880}
