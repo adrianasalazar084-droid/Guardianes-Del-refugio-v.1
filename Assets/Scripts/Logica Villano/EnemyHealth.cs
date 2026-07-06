@@ -28,14 +28,22 @@ public class EnemyHealth : MonoBehaviour
         vidaActual = vidaTotal;
 
     }
-    public void RecibirDaño(int daño)
+    public void RecibirDaÃ±o(int daÃ±o)
     {
-        vidaActual = vidaActual - daño;
+        vidaActual = vidaActual - daÃ±o;
         if (vidaActual <= 0)
         {
             vidaActual = 0;
+             
+             SoltarLlave soltarLlave = GetComponent<SoltarLlave>();
+        if (soltarLlave != null)
+        {
+            soltarLlave.Soltar();
+        }
 
-            Debug.Log("Enemigo ha muerto");
+        Debug.Log("Enemigo ha muerto");
+
+        Destroy(gameObject);
         }
 
     }
