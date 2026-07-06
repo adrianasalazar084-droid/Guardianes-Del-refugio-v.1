@@ -13350,10 +13350,10 @@ MonoBehaviour:
         z: 7.2501564
       Rotation:
         value:
-          x: 0.1147677
-          y: 0.24609454
-          z: -0.0653194
-          w: 0.9602079
+          x: 0.11476771
+          y: 0.24609455
+          z: -0.06531941
+          w: 0.96020794
     - Position:
         x: -141.53
         y: 14.85
@@ -64934,6 +64934,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5331641914540122503}
     m_Modifications:
+    - target: {fileID: 2323020734430581052, guid: 0fd83ba0ec7655246bc43da209306b3d, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2867603950356370505, guid: 0fd83ba0ec7655246bc43da209306b3d, type: 3}
       propertyPath: m_Name
       value: jaulas (1)
@@ -64993,7 +64997,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2867603950356370505, guid: 0fd83ba0ec7655246bc43da209306b3d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1756690331}
   m_SourcePrefab: {fileID: 100100000, guid: 0fd83ba0ec7655246bc43da209306b3d, type: 3}
 --- !u!4 &1176610436 stripped
 Transform:
@@ -81739,6 +81746,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7273361267704474144, guid: 0f3ca2782f25ce9418b50308a3fe9497, type: 3}
   m_PrefabInstance: {fileID: 1755514660}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1756690330 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2867603950356370505, guid: 0fd83ba0ec7655246bc43da209306b3d, type: 3}
+  m_PrefabInstance: {fileID: 1176610435}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1756690331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1756690330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 885b5f964ff455549bc869dc004662f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestruirJaula
 --- !u!1001 &1786102421
 PrefabInstance:
   m_ObjectHideFlags: 0

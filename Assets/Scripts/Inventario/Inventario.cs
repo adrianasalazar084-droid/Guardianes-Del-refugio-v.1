@@ -17,7 +17,14 @@ public class Inventario : MonoBehaviour
         llaves++;
         ActualizarUI();
     }
-
+    public void UsarLlave()
+    {
+        if (llaves > 0)
+        {
+            llaves--;
+            ActualizarUI();
+        }
+    }
     void ActualizarUI()
     {
         textoLlaves.text = "x " + llaves;
