@@ -14,6 +14,7 @@ public class DestruirJaula : MonoBehaviour
                 {
                     inventario.UsarLlave();
                     Destroy(gameObject);
+                    Debug.Log("Jaula destruida");
                 }
             }
         }
