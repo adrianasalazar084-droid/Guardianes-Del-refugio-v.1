@@ -45,7 +45,7 @@ public class KobuHealth : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.R))
         {
             RecibirDaño(10);
         }
