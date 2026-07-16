@@ -1228,11 +1228,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1875569427938456509, guid: 2b27e22a208aeff4e8dfdec66df34af4, type: 3}
   m_PrefabInstance: {fileID: 1812655907}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &50907763 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5006568184419308564, guid: ccdf504b2fdb02d4fb72a939496194d3, type: 3}
-  m_PrefabInstance: {fileID: 3369830858313899661}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &55049411
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13283,10 +13278,10 @@ MonoBehaviour:
         z: 7.2501564
       Rotation:
         value:
-          x: 0.11476771
-          y: 0.24609455
-          z: -0.06531941
-          w: 0.96020794
+          x: 0.1147677
+          y: 0.24609454
+          z: -0.0653194
+          w: 0.9602079
     - Position:
         x: -141.53
         y: 14.85
@@ -84858,11 +84853,6 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
---- !u!4 &1900449222 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6112354905458533068, guid: ccdf504b2fdb02d4fb72a939496194d3, type: 3}
-  m_PrefabInstance: {fileID: 3369830858313899661}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1904803275
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -89420,22 +89410,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2453634149938838559, guid: ccdf504b2fdb02d4fb72a939496194d3, type: 3}
-      propertyPath: puntoGolpe
-      value: 
-      objectReference: {fileID: 50907763}
-    - target: {fileID: 2453634149938838559, guid: ccdf504b2fdb02d4fb72a939496194d3, type: 3}
-      propertyPath: particulaGolpe
-      value: 
-      objectReference: {fileID: 6192724089161036641, guid: e17d9a3f04750764c8c0a7a0461e4c3b, type: 3}
-    - target: {fileID: 6107285212082335161, guid: ccdf504b2fdb02d4fb72a939496194d3, type: 3}
-      propertyPath: puntoPies
-      value: 
-      objectReference: {fileID: 1900449222}
-    - target: {fileID: 6107285212082335161, guid: ccdf504b2fdb02d4fb72a939496194d3, type: 3}
-      propertyPath: particulaPolvo
-      value: 
-      objectReference: {fileID: 554424013885806692, guid: fca55aa9fe41bb4498a6f473477b56d3, type: 3}
     - target: {fileID: 6477213018987843083, guid: ccdf504b2fdb02d4fb72a939496194d3, type: 3}
       propertyPath: textoLlaves
       value: 
