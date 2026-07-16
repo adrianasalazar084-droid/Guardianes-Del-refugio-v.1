@@ -3,7 +3,7 @@ using UnityEngine;
 public class LogicaKobu : MonoBehaviour
 {
     public float velocidad = 1.3f;
-    public float velocidadCorrer = 2.6f; 
+    public float velocidadCorrer = 2.6f;
     public float velocidadRotacion = 80f;
 
     private Animator anim;
@@ -11,8 +11,11 @@ public class LogicaKobu : MonoBehaviour
     public float x, y;
 
     public Rigidbody rb;
-    public float fuerzaDeSalto = 6f;
+    public float fuerzaDeSalto = 8f;
     public bool puedoSaltar;
+
+    public GameObject particulaPolvo; 
+    public Transform puntoPies; 
 
     private KobuAttack ataque;
 
@@ -32,7 +35,7 @@ public class LogicaKobu : MonoBehaviour
         {
             transform.Rotate(0, x * Time.deltaTime * velocidadRotacion, 0);
 
-           
+            
             float velocidadActual = estoyCorriendo ? velocidadCorrer : velocidad;
             transform.Translate(0, 0, y * Time.deltaTime * velocidadActual);
         }
@@ -45,7 +48,6 @@ public class LogicaKobu : MonoBehaviour
 
         if (!ataque.estoyAtacando)
         {
-            
             estoyCorriendo = Input.GetKey(KeyCode.LeftShift) && y > 0.1f;
 
             anim.SetFloat("VelX", x);
@@ -57,7 +59,7 @@ public class LogicaKobu : MonoBehaviour
             anim.SetFloat("VelX", 0);
             anim.SetFloat("VelY", 0);
 
-           
+            
             estoyCorriendo = false;
             anim.SetBool("Correr", false);
         }
@@ -69,14 +71,20 @@ public class LogicaKobu : MonoBehaviour
                 if (Input.GetKeyDown(KeyCode.Space))
                 {
                     anim.SetBool("Salto", true);
-                    estabaEnElAire = true; // NUEVO
+                    estabaEnElAire = true; 
                     rb.AddForce(Vector3.up * fuerzaDeSalto, ForceMode.Impulse);
+
+                    
+                    if (particulaPolvo != null && puntoPies != null)
+                    {
+                        Instantiate(particulaPolvo, puntoPies.position, Quaternion.identity);
+                    }
                 }
             }
 
             anim.SetBool("TocoSuelo", true);
 
-           
+            
             if (estabaEnElAire)
             {
                 anim.SetBool("Salto", false);
@@ -85,7 +93,7 @@ public class LogicaKobu : MonoBehaviour
         }
         else
         {
-            estabaEnElAire = true;
+            estabaEnElAire = true; 
             EstoyCayendo();
         }
     }
@@ -93,6 +101,6 @@ public class LogicaKobu : MonoBehaviour
     public void EstoyCayendo()
     {
         anim.SetBool("TocoSuelo", false);
-       
+        
     }
 }

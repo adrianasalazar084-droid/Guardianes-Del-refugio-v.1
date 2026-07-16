@@ -6,6 +6,9 @@ public class KobuAttack : MonoBehaviour
 
     public bool estoyAtacando;
 
+    public GameObject particulaGolpe; 
+    public Transform puntoGolpe; 
+
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -17,6 +20,15 @@ public class KobuAttack : MonoBehaviour
         {
             anim.SetTrigger("golpe");
             estoyAtacando = true;
+        }
+    }
+
+   
+    public void InstanciarParticulaGolpe()
+    {
+        if (particulaGolpe != null && puntoGolpe != null)
+        {
+            Instantiate(particulaGolpe, puntoGolpe.position, puntoGolpe.rotation);
         }
     }
 
