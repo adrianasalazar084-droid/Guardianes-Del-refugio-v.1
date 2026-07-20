@@ -11,12 +11,20 @@ public class EnemyMover : MonoBehaviour
     public float rangoCorrer = 4f;
     public float velocidadRotacion = 10f;
 
+    [Header("Ataque")]
+    public float cooldownAtaque = 2f;
+    private float temporizadorAtaque = 0f;
+    private bool atacando = false;
+    public EnemyHitbox hitboxAtaque;
+
     [Header("Ground Snapping")]
     public LayerMask capaSuelo;
-    public float alturaOrigenRayo = 1f; 
-    public float distanciaRayo = 3f;    
-    public float offsetSuelo = 0.05f;   
+    public float alturaOrigenRayo = 1f;
+    public float distanciaRayo = 3f;
+    public float offsetSuelo = 0.05f;
+    public float velocidadCaida = 5f;
 
+    [Header("Patrulla")]
     private EnemyDetector detector;
     private EnemyPatrol patrol;
     private Rigidbody rb;
@@ -36,7 +44,18 @@ public class EnemyMover : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (temporizadorAtaque > 0f)
+        {
+            temporizadorAtaque -= Time.fixedDeltaTime;
+        }
+
         int estadoActual;
+
+        if (atacando)
+        {
+          
+            return;
+        }
 
         if (detector.jugadorDetectado && detector.jugador != null)
         {
@@ -62,13 +81,11 @@ public class EnemyMover : MonoBehaviour
 
         if (Physics.Raycast(origenRayo, Vector3.down, out RaycastHit hit, distanciaRayo, capaSuelo))
         {
+            float alturaObjetivo = hit.point.y + offsetSuelo;
             Vector3 posicionCorregida = rb.position;
-            posicionCorregida.y = hit.point.y + offsetSuelo;
+            posicionCorregida.y = Mathf.MoveTowards(rb.position.y, alturaObjetivo, velocidadCaida * Time.fixedDeltaTime);
             rb.MovePosition(posicionCorregida);
-
-           
         }
-        Debug.DrawRay(origenRayo, Vector3.down * distanciaRayo, Color.green);
     }
 
     private int Perseguir()
@@ -86,6 +103,10 @@ public class EnemyMover : MonoBehaviour
 
         if (distanciaActual <= distanciaMinima)
         {
+            if (temporizadorAtaque <= 0f)
+            {
+                Atacar();
+            }
             return ESTADO_IDLE;
         }
 
@@ -107,5 +128,27 @@ public class EnemyMover : MonoBehaviour
         rb.MovePosition(nuevaPosicion);
 
         return estado;
+    }
+    // Llamado por Animation Event — reenvía la llamada al hitbox real
+    public void ActivarHitbox()
+    {
+        if (hitboxAtaque != null) hitboxAtaque.ActivarHitbox();
+    }
+
+    public void DesactivarHitbox()
+    {
+        if (hitboxAtaque != null) hitboxAtaque.DesactivarHitbox();
+    }
+    private void Atacar()
+    {
+        atacando = true;
+        temporizadorAtaque = cooldownAtaque;
+        animator.SetTrigger("atacar");
+    }
+
+   
+    public void TerminarAtaque()
+    {
+        atacando = false;
     }
 }
