@@ -74,6 +74,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5237822985602558460, guid: 55098c36fb10a5c4c88ab2795fa8b8b8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4486603703613423713}
+    - targetCorrespondingSourceObject: {fileID: 5237822985602558460, guid: 55098c36fb10a5c4c88ab2795fa8b8b8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5259420834062908119}
   m_SourcePrefab: {fileID: 100100000, guid: 55098c36fb10a5c4c88ab2795fa8b8b8, type: 3}
 --- !u!1 &8177019885794103633 stripped
 GameObject:
@@ -128,3 +131,15 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.54828495
   m_Center: {x: 0, y: 0.4532888, z: 0}
+--- !u!114 &5259420834062908119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8177019885794103633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4e7aa21e220c854b905448fc40c6ec6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Destructible
