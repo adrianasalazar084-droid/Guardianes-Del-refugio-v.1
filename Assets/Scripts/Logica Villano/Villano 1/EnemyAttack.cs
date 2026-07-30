@@ -31,10 +31,6 @@ public class EnemyAttack : MonoBehaviour
     }
 
 
-    /// <summary>
-    /// Intenta realizar un ataque.
-    /// Si aún está en enfriamiento (cooldown), no hace nada.
-    /// </summary>
     public void Atacar()
     {
         

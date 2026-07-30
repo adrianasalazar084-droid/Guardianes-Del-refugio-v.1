@@ -15,6 +15,13 @@ public class KobuHealth : MonoBehaviour
     }
 
     [SerializeField] private int vidaTotal = 100;
+    public bool EstaMuerto
+    {
+        get
+        {
+            return vidaActual <= 0;
+        }
+    }
 
     public int VidaTotal
     {
@@ -24,10 +31,33 @@ public class KobuHealth : MonoBehaviour
         }
     }
 
+    [Header("Referencias")]
+
+    // Referencia al Animator para reproducir la animación de muerte.
+    [SerializeField] private Animator anim;
+
+    // Script encargado del movimiento.
+    [SerializeField] private LogicaKobu logicaKobu;
+
+    // Script encargado del ataque.
+    [SerializeField] private KobuAttack kobuAttack;
+
 
     void Start()
     {
         vidaActual = vidaTotal;
+
+
+
+        // las buscamos automáticamente.
+        if (anim == null)
+            anim = GetComponent<Animator>();
+
+        if (logicaKobu == null)
+            logicaKobu = GetComponent<LogicaKobu>();
+
+        if (kobuAttack == null)
+            kobuAttack = GetComponent<KobuAttack>();
 
     }
     public void RecibirDaño(int daño)
@@ -37,17 +67,25 @@ public class KobuHealth : MonoBehaviour
         {
             vidaActual = 0;
 
-            Debug.Log("Kobu ha muerto");
+            Morir();
         }
 
     }
 
 
-    void Update()
+    private void Morir()
     {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            RecibirDaño(10);
-        }
+        Debug.Log("Kobu ha muerto");
+
+        // Reproducimos la animación de muerte.
+        anim.SetTrigger("Death");
+
+        // Desactivamos el movimiento.
+        logicaKobu.enabled = false;
+
+        // Desactivamos el ataque.
+        kobuAttack.enabled = false;
     }
+
 }
+

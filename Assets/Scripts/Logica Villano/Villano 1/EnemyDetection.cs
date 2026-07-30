@@ -9,6 +9,7 @@ public class EnemyDetection : MonoBehaviour
   
     [SerializeField] private EnemyMovement enemyMovement;
 
+    [SerializeField] private KobuHealth kobuHealth;
 
     [Header("Detección")]
 
@@ -25,12 +26,23 @@ public class EnemyDetection : MonoBehaviour
 
         if (enemyAttack == null)
             enemyAttack = GetComponent<EnemyAttack>();
+
+        if (kobuHealth == null && jugador != null)
+        {
+            kobuHealth = jugador.GetComponent<KobuHealth>();
+        }
     }
    
 
     private void Update()
     {
-     
+        // Si Kobu murió, dejamos de perseguir y atacar.
+        if (kobuHealth != null && kobuHealth.EstaMuerto)
+        {
+            enemyMovement.Detener();
+            return;
+        }
+
         if (jugador == null)
             return;
 
