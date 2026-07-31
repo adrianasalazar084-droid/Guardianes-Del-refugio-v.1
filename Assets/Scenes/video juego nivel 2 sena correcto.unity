@@ -17560,6 +17560,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 3544051800855742738, guid: eb5acef952402e64b9a33e28d843f70a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3549649511755879914, guid: eb5acef952402e64b9a33e28d843f70a, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -33153,10 +33157,10 @@ MonoBehaviour:
         z: 7.2501564
       Rotation:
         value:
-          x: 0.11476771
-          y: 0.24609455
+          x: 0.114767715
+          y: 0.24609458
           z: -0.06531941
-          w: 0.96020794
+          w: 0.960208
     - Position:
         x: -141.53
         y: 14.85
