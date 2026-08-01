@@ -31,3 +31,8 @@
     -unity-text-outline-color: rgb(0, 0, 0);
     -unity-text-outline-width: 6px;
 }
+
+.Boton:hover {
+    scale: 1.1 1.1;
+    background-color: rgba(7, 224, 16, 0.58);
+}
