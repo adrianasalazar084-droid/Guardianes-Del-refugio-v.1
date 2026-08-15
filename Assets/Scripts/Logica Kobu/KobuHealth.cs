@@ -1,5 +1,3 @@
-using JetBrains.Annotations;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class KobuHealth : MonoBehaviour
@@ -15,6 +13,7 @@ public class KobuHealth : MonoBehaviour
     }
 
     [SerializeField] private int vidaTotal = 100;
+
     public bool EstaMuerto
     {
         get
@@ -42,14 +41,16 @@ public class KobuHealth : MonoBehaviour
     // Script encargado del ataque.
     [SerializeField] private KobuAttack kobuAttack;
 
+    // Script encargado de colocar nuevamente al jugador en el Spawn.
+    [SerializeField] private PlayerRespawn playerRespawn;
+
 
     void Start()
     {
         vidaActual = vidaTotal;
 
-
-
-        // las buscamos automáticamente.
+        // Buscamos automáticamente los componentes si no fueron asignados
+        // desde el Inspector.
         if (anim == null)
             anim = GetComponent<Animator>();
 
@@ -59,18 +60,31 @@ public class KobuHealth : MonoBehaviour
         if (kobuAttack == null)
             kobuAttack = GetComponent<KobuAttack>();
 
+        if (playerRespawn == null)
+            playerRespawn = GetComponent<PlayerRespawn>();
     }
+
+
     public void RecibirDaño(int daño)
     {
-        vidaActual = vidaActual - daño;
+        vidaActual -= daño;
+
         if (vidaActual <= 0)
         {
             vidaActual = 0;
 
             Morir();
         }
-
     }
+
+    
+    /// Restaura la vida del jugador al máximo.
+    
+    public void RestaurarVida()
+    {
+        vidaActual = vidaTotal;
+    
+}
 
 
     private void Morir()
@@ -86,6 +100,4 @@ public class KobuHealth : MonoBehaviour
         // Desactivamos el ataque.
         kobuAttack.enabled = false;
     }
-
 }
-
