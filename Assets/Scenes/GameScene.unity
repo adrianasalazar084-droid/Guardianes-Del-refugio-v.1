@@ -1321,6 +1321,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SoltarLlave
   llavePrefab: {fileID: 2253393103804301607, guid: e360d8d16d87ca544b56a603ea831f2f, type: 3}
+  puntoDeSpawn: {fileID: 0}
 --- !u!1001 &141446718
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5614,10 +5615,10 @@ MonoBehaviour:
         z: 7.2501564
       Rotation:
         value:
-          x: 0.114767715
-          y: 0.24609458
-          z: -0.06531941
-          w: 0.960208
+          x: 0.1147677
+          y: 0.24609454
+          z: -0.0653194
+          w: 0.9602079
     - Position:
         x: -141.53
         y: 14.85
@@ -8093,6 +8094,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 55dcc3fd184900641bb35a1410c0cedf, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1223927599}
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 55dcc3fd184900641bb35a1410c0cedf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 728939078}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 55dcc3fd184900641bb35a1410c0cedf, type: 3}
       insertIndex: -1
@@ -8115,6 +8119,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 55dcc3fd184900641bb35a1410c0cedf, type: 3}
       insertIndex: -1
       addedObject: {fileID: 863044345}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 55dcc3fd184900641bb35a1410c0cedf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 863044347}
   m_SourcePrefab: {fileID: 100100000, guid: 55dcc3fd184900641bb35a1410c0cedf, type: 3}
 --- !u!1 &649397202
 GameObject:
@@ -9375,6 +9382,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1079144067303380755, guid: 8d3662977e33dff439aca40b0179cdaf, type: 3}
   m_PrefabInstance: {fileID: 436044665}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &728939077
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 728939078}
+  m_Layer: 0
+  m_Name: Drop
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &728939078
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 728939077}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.841, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 863044337}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &737142276
 GameObject:
   m_ObjectHideFlags: 0
@@ -10555,6 +10593,20 @@ MonoBehaviour:
   agent: {fileID: 0}
   enemyHealth: {fileID: 0}
   enemyAttack: {fileID: 0}
+--- !u!114 &863044347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 863044335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d8177c451daad145a9d43c222c1a01d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SoltarLlave
+  llavePrefab: {fileID: 2253393103804301607, guid: e360d8d16d87ca544b56a603ea831f2f, type: 3}
+  puntoDeSpawn: {fileID: 728939078}
 --- !u!1 &865296728 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: c610d54f43e2dee4fab40f58fb6703b2, type: 3}
@@ -14566,7 +14618,7 @@ PrefabInstance:
     - target: {fileID: 2036831138409039955, guid: 52b63465ba608e04e8718b17359b9a17, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 695997086}
     - target: {fileID: 2040913512787936602, guid: 52b63465ba608e04e8718b17359b9a17, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -15022,7 +15074,7 @@ PrefabInstance:
     - target: {fileID: 6017306301919627349, guid: 52b63465ba608e04e8718b17359b9a17, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 695997086}
     - target: {fileID: 6034774374079160135, guid: 52b63465ba608e04e8718b17359b9a17, type: 3}
       propertyPath: m_Mesh
       value: 

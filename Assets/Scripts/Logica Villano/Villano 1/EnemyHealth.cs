@@ -88,20 +88,22 @@ public class EnemyHealth : MonoBehaviour
     /// </summary>
     private void Morir()
     {
-        // Marcamos al enemigo como muerto.
         estaMuerto = true;
 
         Debug.Log("Enemigo ha muerto");
 
-        // Soltamos la llave si el enemigo tiene el script.
         SoltarLlave soltarLlave = GetComponent<SoltarLlave>();
-
         if (soltarLlave != null)
         {
             soltarLlave.Soltar();
         }
 
-        // Reproducimos la animación de muerte.
+        SoltarMonedas soltarMonedas = GetComponent<SoltarMonedas>();
+        if (soltarMonedas != null)
+        {
+            soltarMonedas.Soltar();
+        }
+
         anim.Play("Death");
     }
 
