@@ -1180,6 +1180,7 @@ MonoBehaviour:
   anim: {fileID: 0}
   agent: {fileID: 0}
   enemyHealth: {fileID: 0}
+  enemyAttack: {fileID: 0}
 --- !u!114 &126142752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2085,6 +2086,7 @@ MonoBehaviour:
   anim: {fileID: 0}
   agent: {fileID: 0}
   enemyHealth: {fileID: 0}
+  enemyAttack: {fileID: 0}
 --- !u!195 &164118980
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -8035,7 +8037,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55dcc3fd184900641bb35a1410c0cedf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -32.07
+      value: 39.16
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55dcc3fd184900641bb35a1410c0cedf, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8043,7 +8045,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55dcc3fd184900641bb35a1410c0cedf, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 36.02
+      value: 37.82
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 55dcc3fd184900641bb35a1410c0cedf, type: 3}
       propertyPath: m_LocalRotation.w
@@ -10515,7 +10517,7 @@ MonoBehaviour:
   enemyMovement: {fileID: 0}
   kobuHealth: {fileID: 0}
   enemyHealth: {fileID: 0}
-  radioDeteccion: 5
+  radioDeteccion: 5.8
   distanciaAtaque: 3.43
   enemyAttack: {fileID: 0}
 --- !u!114 &863044344
@@ -10552,6 +10554,7 @@ MonoBehaviour:
   anim: {fileID: 0}
   agent: {fileID: 0}
   enemyHealth: {fileID: 0}
+  enemyAttack: {fileID: 0}
 --- !u!1 &865296728 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: c610d54f43e2dee4fab40f58fb6703b2, type: 3}

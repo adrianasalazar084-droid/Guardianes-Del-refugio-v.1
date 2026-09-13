@@ -6,16 +6,12 @@ public class EnemyMovement : MonoBehaviour
     [Header("Velocidades")]
 
     [SerializeField] private float velocidadCaminar = 1f;
-
-
     [SerializeField] private float velocidadCorrer = 2f;
 
 
     [Header("Distancias")]
 
     [SerializeField] private float distanciaSeguimiento = 1f;
-
-
     [SerializeField] private float distanciaCorrer = 3f;
 
 
@@ -24,6 +20,7 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private Animator anim;
     [SerializeField] private NavMeshAgent agent;
     [SerializeField] private EnemyHealth enemyHealth;
+    [SerializeField] private EnemyAttack enemyAttack;
 
 
     private void Awake()
@@ -37,6 +34,8 @@ public class EnemyMovement : MonoBehaviour
         if (enemyHealth == null)
             enemyHealth = GetComponent<EnemyHealth>();
 
+        if (enemyAttack == null)
+            enemyAttack = GetComponent<EnemyAttack>();
 
         agent.stoppingDistance = distanciaSeguimiento;
     }
@@ -50,24 +49,26 @@ public class EnemyMovement : MonoBehaviour
             return;
         }
 
+        // Si está atacando, se queda quieto hasta que termine la animación.
+        if (enemyAttack != null && enemyAttack.EstaAtacando)
+        {
+            Detener();
+            return;
+        }
+
         if (objetivo == null)
             return;
 
         float distancia = Vector3.Distance(transform.position, objetivo.position);
 
-
         agent.isStopped = false;
-
-
         agent.SetDestination(objetivo.position);
-
 
         if (distancia > distanciaCorrer)
         {
             agent.speed = velocidadCorrer;
             anim.SetFloat("Velocidad", 1f);
         }
-
         else
         {
             agent.speed = velocidadCaminar;
@@ -80,7 +81,6 @@ public class EnemyMovement : MonoBehaviour
         agent.isStopped = true;
         anim.SetFloat("Velocidad", 0f);
     }
-
 
     public bool HaLlegado()
     {

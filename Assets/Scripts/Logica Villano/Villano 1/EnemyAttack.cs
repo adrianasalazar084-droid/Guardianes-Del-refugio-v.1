@@ -4,26 +4,33 @@ public class EnemyAttack : MonoBehaviour
 {
     [Header("Referencias")]
 
-    // Referencia al Animator para reproducir la animación.
     [SerializeField] private Animator anim;
     [SerializeField] private EnemyHealth enemyHealth;
 
 
     [Header("Ataque")]
 
-    // Tiempo que debe esperar entre un ataque y otro.
     [SerializeField] private float tiempoEntreAtaques = 1.5f;
     [SerializeField] private EnemyHitbox hitbox;
 
 
-    // Guarda el instante en que podrá volver a atacar.
     private float siguienteAtaque;
+
+    // Indica si el enemigo está en medio de la animación de ataque.
+    private bool estaAtacando = false;
+
+    // Permite consultar desde EnemyMovement / EnemyDetection si el enemigo está atacando.
+    public bool EstaAtacando
+    {
+        get
+        {
+            return estaAtacando;
+        }
+    }
 
 
     private void Awake()
     {
-        // Si olvidamos asignar el Animator desde el Inspector,
-        // lo buscamos automáticamente.
         if (anim == null)
             anim = GetComponent<Animator>();
 
@@ -37,21 +44,34 @@ public class EnemyAttack : MonoBehaviour
 
     public void Atacar()
     {
-        // Si ya empezó a morir, no debe poder atacar.
         if (enemyHealth != null && enemyHealth.EstaMuerto)
             return;
 
-        // ¿Todavía no puede atacar?
+        // Si ya está atacando, no reiniciamos el ataque.
+        if (estaAtacando)
+            return;
+
         if (Time.time < siguienteAtaque)
             return;
 
-        // Guardamos el momento del próximo ataque permitido.
         siguienteAtaque = Time.time + tiempoEntreAtaques;
+
+        // Marcamos que empezó a atacar (esto bloqueará el movimiento).
+        estaAtacando = true;
 
         hitbox.ReiniciarGolpe();
 
-        // Activamos la animación.
         anim.SetTrigger("Attack");
+    }
+
+
+    /// <summary>
+    /// Debe llamarse desde un Animation Event al final del clip "Attack".
+    /// </summary>
+    public void FinAtaque()
+    {
+        estaAtacando = false;
+        anim.ResetTrigger("Attack");
     }
 
 }
