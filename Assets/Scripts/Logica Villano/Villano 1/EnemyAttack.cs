@@ -6,6 +6,7 @@ public class EnemyAttack : MonoBehaviour
 
     // Referencia al Animator para reproducir la animación.
     [SerializeField] private Animator anim;
+    [SerializeField] private EnemyHealth enemyHealth;
 
 
     [Header("Ataque")]
@@ -28,12 +29,18 @@ public class EnemyAttack : MonoBehaviour
 
         if (hitbox == null)
             hitbox = GetComponentInChildren<EnemyHitbox>();
+
+        if (enemyHealth == null)
+            enemyHealth = GetComponent<EnemyHealth>();
     }
 
 
     public void Atacar()
     {
-        
+        // Si ya empezó a morir, no debe poder atacar.
+        if (enemyHealth != null && enemyHealth.EstaMuerto)
+            return;
+
         // ¿Todavía no puede atacar?
         if (Time.time < siguienteAtaque)
             return;
@@ -46,5 +53,5 @@ public class EnemyAttack : MonoBehaviour
         // Activamos la animación.
         anim.SetTrigger("Attack");
     }
-  
+
 }

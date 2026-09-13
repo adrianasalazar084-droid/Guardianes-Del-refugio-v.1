@@ -6,14 +6,15 @@ public class EnemyDetection : MonoBehaviour
 
     [SerializeField] private Transform jugador;
 
-  
+
     [SerializeField] private EnemyMovement enemyMovement;
 
     [SerializeField] private KobuHealth kobuHealth;
+    [SerializeField] private EnemyHealth enemyHealth;
 
     [Header("Detección")]
 
-    
+
     [SerializeField] private float radioDeteccion = 5f;
     [SerializeField] private float distanciaAtaque = 2f;
     [SerializeField] private EnemyAttack enemyAttack;
@@ -31,11 +32,22 @@ public class EnemyDetection : MonoBehaviour
         {
             kobuHealth = jugador.GetComponent<KobuHealth>();
         }
+
+        if (enemyHealth == null)
+            enemyHealth = GetComponent<EnemyHealth>();
     }
-   
+
 
     private void Update()
     {
+        // Si el villano ya empezó a morir, dejamos de perseguir y atacar,
+        // pero sin desactivar el GameObject (la animación y el Animation Event lo destruirán).
+        if (enemyHealth != null && enemyHealth.EstaMuerto)
+        {
+            enemyMovement.Detener();
+            return;
+        }
+
         // Si Kobu murió, dejamos de perseguir y atacar.
         if (kobuHealth != null && kobuHealth.EstaMuerto)
         {
@@ -46,7 +58,7 @@ public class EnemyDetection : MonoBehaviour
         if (jugador == null)
             return;
 
-        
+
         float distancia = Vector3.Distance(transform.position, jugador.position);
 
         // Si el jugador está fuera del radio de detección,
@@ -54,7 +66,7 @@ public class EnemyDetection : MonoBehaviour
         if (distancia > radioDeteccion)
         {
             enemyMovement.Detener();
-            return; 
+            return;
         }
 
         // Si el jugador está a distancia de ataque,
@@ -74,7 +86,7 @@ public class EnemyDetection : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
-        
+
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, radioDeteccion);
     }

@@ -23,6 +23,7 @@ public class EnemyMovement : MonoBehaviour
 
     [SerializeField] private Animator anim;
     [SerializeField] private NavMeshAgent agent;
+    [SerializeField] private EnemyHealth enemyHealth;
 
 
     private void Awake()
@@ -33,30 +34,40 @@ public class EnemyMovement : MonoBehaviour
         if (agent == null)
             agent = GetComponent<NavMeshAgent>();
 
-    
+        if (enemyHealth == null)
+            enemyHealth = GetComponent<EnemyHealth>();
+
+
         agent.stoppingDistance = distanciaSeguimiento;
     }
 
     public void Perseguir(Transform objetivo)
     {
+        // Si ya empezó a morir, no debe seguir persiguiendo.
+        if (enemyHealth != null && enemyHealth.EstaMuerto)
+        {
+            Detener();
+            return;
+        }
+
         if (objetivo == null)
             return;
 
         float distancia = Vector3.Distance(transform.position, objetivo.position);
 
-      
+
         agent.isStopped = false;
 
-   
+
         agent.SetDestination(objetivo.position);
 
-     
+
         if (distancia > distanciaCorrer)
         {
             agent.speed = velocidadCorrer;
             anim.SetFloat("Velocidad", 1f);
         }
-   
+
         else
         {
             agent.speed = velocidadCaminar;
@@ -70,7 +81,7 @@ public class EnemyMovement : MonoBehaviour
         anim.SetFloat("Velocidad", 0f);
     }
 
- 
+
     public bool HaLlegado()
     {
         return !agent.pathPending &&

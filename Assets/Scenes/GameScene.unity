@@ -1179,6 +1179,7 @@ MonoBehaviour:
   distanciaCorrer: 3
   anim: {fileID: 0}
   agent: {fileID: 0}
+  enemyHealth: {fileID: 0}
 --- !u!114 &126142752
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1193,6 +1194,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
   vidaActual: 0
   vidaTotal: 100
+  anim: {fileID: 0}
 --- !u!114 &126142753
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1206,6 +1208,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
   anim: {fileID: 0}
+  enemyHealth: {fileID: 0}
   tiempoEntreAtaques: 1.5
   hitbox: {fileID: 0}
 --- !u!114 &126142754
@@ -1223,6 +1226,7 @@ MonoBehaviour:
   jugador: {fileID: 6431403872963005119}
   enemyMovement: {fileID: 0}
   kobuHealth: {fileID: 0}
+  enemyHealth: {fileID: 0}
   radioDeteccion: 5
   distanciaAtaque: 3.4
   enemyAttack: {fileID: 0}
@@ -2025,6 +2029,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
   anim: {fileID: 0}
+  enemyHealth: {fileID: 0}
   tiempoEntreAtaques: 1.5
   hitbox: {fileID: 0}
 --- !u!114 &164118977
@@ -2041,6 +2046,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
   vidaActual: 0
   vidaTotal: 100
+  anim: {fileID: 0}
 --- !u!114 &164118978
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2056,6 +2062,7 @@ MonoBehaviour:
   jugador: {fileID: 6431403872963005119}
   enemyMovement: {fileID: 0}
   kobuHealth: {fileID: 0}
+  enemyHealth: {fileID: 0}
   radioDeteccion: 5
   distanciaAtaque: 3
   enemyAttack: {fileID: 0}
@@ -2077,6 +2084,7 @@ MonoBehaviour:
   distanciaCorrer: 3
   anim: {fileID: 0}
   agent: {fileID: 0}
+  enemyHealth: {fileID: 0}
 --- !u!195 &164118980
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -5604,10 +5612,10 @@ MonoBehaviour:
         z: 7.2501564
       Rotation:
         value:
-          x: 0.11476771
-          y: 0.24609455
-          z: -0.065319404
-          w: 0.96020794
+          x: 0.114767715
+          y: 0.24609458
+          z: -0.06531941
+          w: 0.960208
     - Position:
         x: -141.53
         y: 14.85
@@ -10488,6 +10496,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
   anim: {fileID: 0}
+  enemyHealth: {fileID: 0}
   tiempoEntreAtaques: 1.5
   hitbox: {fileID: 0}
 --- !u!114 &863044343
@@ -10505,6 +10514,7 @@ MonoBehaviour:
   jugador: {fileID: 6431403872963005119}
   enemyMovement: {fileID: 0}
   kobuHealth: {fileID: 0}
+  enemyHealth: {fileID: 0}
   radioDeteccion: 5
   distanciaAtaque: 3.43
   enemyAttack: {fileID: 0}
@@ -10522,6 +10532,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
   vidaActual: 0
   vidaTotal: 100
+  anim: {fileID: 0}
 --- !u!114 &863044345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10540,6 +10551,7 @@ MonoBehaviour:
   distanciaCorrer: 3
   anim: {fileID: 0}
   agent: {fileID: 0}
+  enemyHealth: {fileID: 0}
 --- !u!1 &865296728 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: c610d54f43e2dee4fab40f58fb6703b2, type: 3}
@@ -22517,7 +22529,7 @@ Transform:
   m_GameObject: {fileID: 2071553302}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.27, y: 7.34, z: 9.79}
+  m_LocalPosition: {x: -0.46, y: 7.34, z: 9.79}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
