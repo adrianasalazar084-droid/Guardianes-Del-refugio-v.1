@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3353434151847673307
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5298304660360220597}
+  m_Layer: 0
+  m_Name: Drop
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5298304660360220597
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3353434151847673307}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 4.26, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6929013191365343745}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8410658976930792704
 GameObject:
   m_ObjectHideFlags: 0
@@ -219,6 +250,9 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9a9d6ec040b92834098d08430d1ea5cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 5298304660360220597}
     - targetCorrespondingSourceObject: {fileID: -4361254235543792588, guid: 9a9d6ec040b92834098d08430d1ea5cd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6016903030328113638}
@@ -244,10 +278,18 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9a9d6ec040b92834098d08430d1ea5cd, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1245320090314550467}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9a9d6ec040b92834098d08430d1ea5cd, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6724509951687654812}
   m_SourcePrefab: {fileID: 100100000, guid: 9a9d6ec040b92834098d08430d1ea5cd, type: 3}
 --- !u!4 &2655931726853851614 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4361254235543792588, guid: 9a9d6ec040b92834098d08430d1ea5cd, type: 3}
+  m_PrefabInstance: {fileID: 7467660549261549034}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &6929013191365343745 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9a9d6ec040b92834098d08430d1ea5cd, type: 3}
   m_PrefabInstance: {fileID: 7467660549261549034}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &7738059807585984699 stripped
@@ -345,6 +387,8 @@ MonoBehaviour:
   distanciaCorrer: 3
   anim: {fileID: 0}
   agent: {fileID: 0}
+  enemyHealth: {fileID: 0}
+  enemyAttack: {fileID: 0}
 --- !u!114 &1485265874038916794
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -359,6 +403,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
   vidaActual: 0
   vidaTotal: 100
+  anim: {fileID: 0}
 --- !u!114 &8495427031577542219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -374,6 +419,7 @@ MonoBehaviour:
   jugador: {fileID: 0}
   enemyMovement: {fileID: 0}
   kobuHealth: {fileID: 0}
+  enemyHealth: {fileID: 0}
   radioDeteccion: 5
   distanciaAtaque: 1.8
   enemyAttack: {fileID: 0}
@@ -390,5 +436,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAttack
   anim: {fileID: 0}
+  enemyHealth: {fileID: 0}
   tiempoEntreAtaques: 1.5
   hitbox: {fileID: 0}
+--- !u!114 &6724509951687654812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7738059807585984699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87a9c5ac51f483b4ab76a41624bb1912, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SoltarMonedas
+  monedaPrefab: {fileID: 6954758372675618198, guid: 6a301d09debaf1e4a8d3e2657cc44a96, type: 3}
+  cantidadMinima: 2
+  cantidadMaxima: 5
+  puntoDeSpawn: {fileID: 5298304660360220597}
