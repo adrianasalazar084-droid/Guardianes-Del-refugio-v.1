@@ -11,7 +11,10 @@ public class Moneda : MonoBehaviour
     public float fuerzaGiro = 5f;
 
     [Header("Asentamiento")]
-    public float tiempoParaAsentarse = 1.2f;
+    // Velocidad por debajo de la cual consideramos que ya está quieta.
+    public float umbralVelocidad = 0.05f;
+    // Tiempo que debe mantenerse quieta antes de congelarla (evita falsos positivos en el aire).
+    public float tiempoQuieta = 0.3f;
 
     [Header("Referencias")]
     public SimpleGemsAnim gemsAnim;
@@ -25,7 +28,6 @@ public class Moneda : MonoBehaviour
         if (gemsAnim == null)
             gemsAnim = GetComponent<SimpleGemsAnim>();
 
-        // La rotaci�n/flotaci�n decorativa arranca reci�n cuando la moneda se asienta.
         if (gemsAnim != null)
             gemsAnim.enabled = false;
     }
@@ -43,19 +45,35 @@ public class Moneda : MonoBehaviour
         rb.AddForce(impulso, ForceMode.Impulse);
         rb.AddTorque(Random.insideUnitSphere * fuerzaGiro, ForceMode.Impulse);
 
-        StartCoroutine(Asentarse());
+        StartCoroutine(EsperarAsentamiento());
     }
 
-    private IEnumerator Asentarse()
+    private IEnumerator EsperarAsentamiento()
     {
-        yield return new WaitForSeconds(tiempoParaAsentarse);
+        float tiempoQuietaAcumulado = 0f;
 
-        // Frenamos y congelamos la f�sica para que quede fija en el piso.
+        // Esperamos un instante antes de empezar a chequear,
+        // para que el impulso inicial no se detecte como "ya quieta".
+        yield return new WaitForSeconds(0.2f);
+
+        while (tiempoQuietaAcumulado < tiempoQuieta)
+        {
+            if (rb.linearVelocity.magnitude < umbralVelocidad)
+            {
+                tiempoQuietaAcumulado += Time.deltaTime;
+            }
+            else
+            {
+                tiempoQuietaAcumulado = 0f;
+            }
+
+            yield return null;
+        }
+
         rb.linearVelocity = Vector3.zero;
         rb.angularVelocity = Vector3.zero;
         rb.isKinematic = true;
 
-        // Activamos la animaci�n decorativa, igual que en las gemas/llave.
         if (gemsAnim != null)
             gemsAnim.enabled = true;
     }

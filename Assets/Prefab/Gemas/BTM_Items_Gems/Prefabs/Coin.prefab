@@ -125,7 +125,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6954758372675618198}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: afd5667831e257b4d8887b0b0fce86fa, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -146,7 +146,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6954758372675618198}
-  m_Material: {fileID: 13400000, guid: afd5667831e257b4d8887b0b0fce86fa, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -199,10 +199,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54a02b217123cdc47ae9f479eb9c72d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Moneda
-  fuerzaVertical: 4
+  fuerzaVertical: 3
   fuerzaHorizontal: 2
   fuerzaGiro: 5
-  tiempoParaAsentarse: 1.2
+  umbralVelocidad: 0.05
+  tiempoQuieta: 0.2
   gemsAnim: {fileID: 0}
 --- !u!114 &1397949302144476253
 MonoBehaviour:
