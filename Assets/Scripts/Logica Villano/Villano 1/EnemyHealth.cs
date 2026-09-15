@@ -4,76 +4,59 @@ public class EnemyHealth : MonoBehaviour
 {
     [Header("Vida")]
 
-    // Vida actual del enemigo.
     [SerializeField] private int vidaActual = 0;
-
-    // Vida máxima del enemigo.
     [SerializeField] private int vidaTotal = 100;
 
-    // Permite consultar la vida actual desde otros scripts.
-    public int VidaActual
-    {
-        get
-        {
-            return vidaActual;
-        }
-    }
-
-    // Permite consultar la vida máxima desde otros scripts.
-    public int VidaTotal
-    {
-        get
-        {
-            return vidaTotal;
-        }
-    }
+    public int VidaActual { get { return vidaActual; } }
+    public int VidaTotal { get { return vidaTotal; } }
 
     [Header("Referencias")]
 
-    // Animator encargado de reproducir las animaciones del enemigo.
     [SerializeField] private Animator anim;
+    [SerializeField] private EnemyFlash enemyFlash;
+    [SerializeField] private EnemyKnockback enemyKnockback;
 
-    // Indica si el enemigo ya está muerto.
     private bool estaMuerto = false;
 
-    // Permite consultar desde otros scripts (EnemyMovement, EnemyAttack, EnemyDetection)
-    // si el enemigo ya comenzó a morir.
-    public bool EstaMuerto
-    {
-        get
-        {
-            return estaMuerto;
-        }
-    }
+    public bool EstaMuerto { get { return estaMuerto; } }
 
 
     void Start()
     {
-        // Inicializamos la vida.
         vidaActual = vidaTotal;
 
-        // Si no asignamos el Animator desde el Inspector,
-        // lo buscamos automáticamente en este mismo objeto.
         if (anim == null)
-        {
             anim = GetComponent<Animator>();
-        }
+
+        if (enemyFlash == null)
+            enemyFlash = GetComponent<EnemyFlash>();
+
+        if (enemyKnockback == null)
+            enemyKnockback = GetComponent<EnemyKnockback>();
     }
 
 
     /// <summary>
-    /// Recibe daño y comprueba si el enemigo debe morir.
+    /// Recibe daño. origenGolpe es opcional: si se pasa, se usa para calcular
+    /// la dirección del knockback (alejándolo del punto de impacto).
     /// </summary>
-    public void RecibirDaño(int daño)
+    public void RecibirDaño(int daño, Vector3? origenGolpe = null)
     {
-        // Si ya está muerto, ignoramos cualquier daño adicional.
         if (estaMuerto)
             return;
 
-        // Restamos el daño recibido.
         vidaActual = vidaActual - daño;
 
-        // Comprobamos si la vida llegó a 0.
+        if (enemyFlash != null)
+        {
+            enemyFlash.Flash();
+        }
+
+        if (enemyKnockback != null && origenGolpe.HasValue)
+        {
+            enemyKnockback.AplicarKnockback(origenGolpe.Value);
+        }
+
         if (vidaActual <= 0)
         {
             vidaActual = 0;
@@ -83,9 +66,6 @@ public class EnemyHealth : MonoBehaviour
     }
 
 
-    /// <summary>
-    /// Inicia la muerte del enemigo.
-    /// </summary>
     private void Morir()
     {
         estaMuerto = true;

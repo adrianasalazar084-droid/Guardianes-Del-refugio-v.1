@@ -21,6 +21,7 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] private NavMeshAgent agent;
     [SerializeField] private EnemyHealth enemyHealth;
     [SerializeField] private EnemyAttack enemyAttack;
+    [SerializeField] private EnemyKnockback enemyKnockback;
 
 
     private void Awake()
@@ -37,22 +38,29 @@ public class EnemyMovement : MonoBehaviour
         if (enemyAttack == null)
             enemyAttack = GetComponent<EnemyAttack>();
 
+        if (enemyKnockback == null)
+            enemyKnockback = GetComponent<EnemyKnockback>();
+
         agent.stoppingDistance = distanciaSeguimiento;
     }
 
     public void Perseguir(Transform objetivo)
     {
-        // Si ya empezó a morir, no debe seguir persiguiendo.
         if (enemyHealth != null && enemyHealth.EstaMuerto)
         {
             Detener();
             return;
         }
 
-        // Si está atacando, se queda quieto hasta que termine la animación.
         if (enemyAttack != null && enemyAttack.EstaAtacando)
         {
             Detener();
+            return;
+        }
+
+        // Mientras dura el knockback, el propio EnemyKnockback controla el movimiento.
+        if (enemyKnockback != null && enemyKnockback.EnKnockback)
+        {
             return;
         }
 
@@ -78,6 +86,10 @@ public class EnemyMovement : MonoBehaviour
 
     public void Detener()
     {
+        // No pisamos el knockback si está en curso.
+        if (enemyKnockback != null && enemyKnockback.EnKnockback)
+            return;
+
         agent.isStopped = true;
         anim.SetFloat("Velocidad", 0f);
     }

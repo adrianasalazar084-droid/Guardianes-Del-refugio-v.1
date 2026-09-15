@@ -16,7 +16,7 @@ public class GolpeHitbox : MonoBehaviour
 
         if (enemyHealth != null)
         {
-            enemyHealth.RecibirDaño(daño);
+            enemyHealth.RecibirDaño(daño, transform.position);
             return;
         }
 
