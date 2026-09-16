@@ -682,8 +682,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 0
   serializedVersion: 3
-  m_Size: {x: 2.2708614, y: 5.3133173, z: 3.5186274}
-  m_Center: {x: 0.029987402, y: -1.0335095, z: 0.7131495}
+  m_Size: {x: 6.66036, y: 6.4729424, z: 3.5186274}
+  m_Center: {x: -0.41333365, y: -1.6133233, z: 0.71314955}
 --- !u!114 &249170312061975249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1145,8 +1145,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4744465308426494508}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.3345789, y: 0, z: 0, w: 0.9423678}
-  m_LocalPosition: {x: 0, y: 60.23184, z: -60.23611}
+  m_LocalRotation: {x: 0.43124038, y: -0.000000057586554, z: 0.00000003155121, w: 0.90223706}
+  m_LocalPosition: {x: 0.000012341835, y: 95.99703, z: -68.368004}
   m_LocalScale: {x: 9.65886, y: 9.658859, z: 9.658859}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1208,8 +1208,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineThirdPersonFollow
   Damping: {x: 0.1, y: 0.5, z: 0.3}
-  ShoulderOffset: {x: 0, y: 1.5, z: -4}
-  VerticalArmLength: 5
+  ShoulderOffset: {x: 0, y: 4.79, z: -5.08}
+  VerticalArmLength: 6.46
   CameraSide: 1
   CameraDistance: 4
   AvoidObstacles:
@@ -1379,6 +1379,73 @@ Transform:
   - {fileID: 5578141195113342249}
   m_Father: {fileID: 3584237037693636241}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6138091456805297123
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2330055375619516562}
+  - component: {fileID: 8704316523100163963}
+  - component: {fileID: 3682959490511794221}
+  m_Layer: 3
+  m_Name: HitboxSkill1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2330055375619516562
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6138091456805297123}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.46, y: 7.34, z: 9.79}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7773246791983332298}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &8704316523100163963
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6138091456805297123}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Radius: 3.2504547
+  m_Center: {x: -9.906241e-16, y: 0.716343, z: -2.0341117}
+--- !u!114 &3682959490511794221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6138091456805297123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddcc54e20f2385e41bcc2234369b6289, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GolpeHitbox
+  "da\xF1o": 100
 --- !u!1 &6182062231214379890
 GameObject:
   m_ObjectHideFlags: 0
@@ -1591,6 +1658,8 @@ GameObject:
   - component: {fileID: 2590321540612860871}
   - component: {fileID: 4093345051524328247}
   - component: {fileID: 4444022544756431124}
+  - component: {fileID: 247447413530201897}
+  - component: {fileID: 8677630411856844691}
   m_Layer: 3
   m_Name: Kobu 1
   m_TagString: Player
@@ -1618,6 +1687,7 @@ Transform:
   - {fileID: 3258759040858569056}
   - {fileID: 7144092248044663563}
   - {fileID: 7691706847916612153}
+  - {fileID: 2330055375619516562}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: -87.08, z: 0}
 --- !u!95 &2568275163245689519
@@ -1704,13 +1774,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 177c06482fea9ce42abdd8035f47cfed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LogicaKobu
-  velocidad: 1.2
+  velocidad: 1.4
   velocidadCorrer: 2.6
-  velocidadRotacion: 80
+  velocidadRotacion: 100
   x: 0
   y: 0
   rb: {fileID: 347058250867892052}
-  fuerzaDeSalto: 4
+  fuerzaDeSalto: 5
   puedoSaltar: 0
   particulaPolvo: {fileID: 554424013885806692, guid: fca55aa9fe41bb4498a6f473477b56d3, type: 3}
   puntoPies: {fileID: 7144092248044663563}
@@ -1728,7 +1798,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   estoyAtacando: 0
-  particulaGolpe: {fileID: 6192724089161036641, guid: e17d9a3f04750764c8c0a7a0461e4c3b, type: 3}
+  particulaGolpe: {fileID: 4306488877223958017, guid: ecb38e0319a6ad44cbca52d7b5add7a6, type: 3}
   puntoGolpe: {fileID: 7691706847916612153}
 --- !u!114 &6268900521926905810
 MonoBehaviour:
@@ -1747,6 +1817,7 @@ MonoBehaviour:
   anim: {fileID: 0}
   logicaKobu: {fileID: 0}
   kobuAttack: {fileID: 0}
+  playerRespawn: {fileID: 0}
 --- !u!114 &2590321540612860871
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1760,7 +1831,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Inventario
   llaves: 0
+  monedas: 0
   textoLlaves: {fileID: 0}
+  textoMonedas: {fileID: 0}
 --- !u!114 &4093345051524328247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1874,6 +1947,40 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &247447413530201897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7062568247302123628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0920bc2cb1775bf42b31f6e318604f57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerRespawn
+  playerSpawn: {fileID: 0}
+  kobuHealth: {fileID: 0}
+  logicaKobu: {fileID: 0}
+  kobuAttack: {fileID: 0}
+  anim: {fileID: 0}
+--- !u!114 &8677630411856844691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7062568247302123628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aba310f54a73d345ac42475890f789c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Skill1Action
+  animator: {fileID: 2568275163245689519}
+  animatorTriggerName: Skill1
+  kobuAttack: {fileID: 546130473367270044}
+  particulaSkill1: {fileID: 5603006198383639307, guid: 8f6a9d2ab3c1e744d8162f7419631a61, type: 3}
+  puntoSkill1: {fileID: 2330055375619516562}
 --- !u!1 &7101787944527666764
 GameObject:
   m_ObjectHideFlags: 0

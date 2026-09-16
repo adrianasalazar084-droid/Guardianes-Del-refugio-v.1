@@ -7037,10 +7037,10 @@ MonoBehaviour:
         z: 7.2501564
       Rotation:
         value:
-          x: 0.11476771
-          y: 0.24609455
-          z: -0.065319404
-          w: 0.96020794
+          x: 0.114767715
+          y: 0.24609458
+          z: -0.06531941
+          w: 0.960208
     - Position:
         x: -141.53
         y: 14.85
@@ -24196,11 +24196,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 703858863504691097, guid: 8ba564e377e2c614490759b11f4c6c6e, type: 3}
   m_PrefabInstance: {fileID: 1258857687}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1606913832 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7062568247302123628, guid: 8e405d70b27f9844d8c957725d1f1efa, type: 3}
-  m_PrefabInstance: {fileID: 6601649920857214023}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1608608282 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1212939449505874047, guid: 8ba8a263a6b4b29498b60390a71d9fea, type: 3}
@@ -29883,73 +29878,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyKnockback
   fuerza: 6
   duracion: 0.3
---- !u!1 &2071553302
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2071553303}
-  - component: {fileID: 2071553305}
-  - component: {fileID: 2071553304}
-  m_Layer: 3
-  m_Name: HitboxSkill1
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2071553303
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2071553302}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.46, y: 7.34, z: 9.79}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 6431403872963005119}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2071553304
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2071553302}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddcc54e20f2385e41bcc2234369b6289, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GolpeHitbox
-  "da\xF1o": 100
---- !u!135 &2071553305
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2071553302}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Radius: 3.2504547
-  m_Center: {x: -9.906241e-16, y: 0.716343, z: -2.0341117}
 --- !u!1001 &2076598988
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32942,7 +32870,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6268900521926905810, guid: 8e405d70b27f9844d8c957725d1f1efa, type: 3}
   m_PrefabInstance: {fileID: 6601649920857214023}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1606913832}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c7705959e30509d4b88a866528b15a53, type: 3}
@@ -33160,56 +33088,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7773246791983332298, guid: 8e405d70b27f9844d8c957725d1f1efa, type: 3}
   m_PrefabInstance: {fileID: 6601649920857214023}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6431403872963005128
+--- !u!114 &6431403872963005137 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1606913832}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0920bc2cb1775bf42b31f6e318604f57, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PlayerRespawn
-  playerSpawn: {fileID: 1826279397}
-  kobuHealth: {fileID: 0}
-  logicaKobu: {fileID: 0}
-  kobuAttack: {fileID: 0}
-  anim: {fileID: 0}
---- !u!114 &6431403872963005134 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 546130473367270044, guid: 8e405d70b27f9844d8c957725d1f1efa, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8677630411856844691, guid: 8e405d70b27f9844d8c957725d1f1efa, type: 3}
   m_PrefabInstance: {fileID: 6601649920857214023}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1606913832}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07524ead0678ea145a28c7924e504616, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
---- !u!95 &6431403872963005136 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 2568275163245689519, guid: 8e405d70b27f9844d8c957725d1f1efa, type: 3}
-  m_PrefabInstance: {fileID: 6601649920857214023}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &6431403872963005137
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1606913832}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1aba310f54a73d345ac42475890f789c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Skill1Action
-  animator: {fileID: 6431403872963005136}
-  animatorTriggerName: Skill1
-  kobuAttack: {fileID: 6431403872963005134}
-  particulaSkill1: {fileID: 5603006198383639307, guid: 8f6a9d2ab3c1e744d8162f7419631a61, type: 3}
-  puntoSkill1: {fileID: 2071553303}
 --- !u!1001 &6601649920857214023
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33218,6 +33107,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 247447413530201897, guid: 8e405d70b27f9844d8c957725d1f1efa, type: 3}
+      propertyPath: playerSpawn
+      value: 
+      objectReference: {fileID: 1826279397}
     - target: {fileID: 467896026514781190, guid: 8e405d70b27f9844d8c957725d1f1efa, type: 3}
       propertyPath: velocidad
       value: 1.4
@@ -33298,10 +33191,6 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: 0.71314955
       objectReference: {fileID: 0}
-    - target: {fileID: 6268900521926905810, guid: 8e405d70b27f9844d8c957725d1f1efa, type: 3}
-      propertyPath: playerRespawn
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 7062568247302123628, guid: 8e405d70b27f9844d8c957725d1f1efa, type: 3}
       propertyPath: m_Name
       value: Kobu
@@ -33348,17 +33237,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects:
-    - targetCorrespondingSourceObject: {fileID: 7773246791983332298, guid: 8e405d70b27f9844d8c957725d1f1efa, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2071553303}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7062568247302123628, guid: 8e405d70b27f9844d8c957725d1f1efa, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6431403872963005128}
-    - targetCorrespondingSourceObject: {fileID: 7062568247302123628, guid: 8e405d70b27f9844d8c957725d1f1efa, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6431403872963005137}
+    m_AddedGameObjects: []
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e405d70b27f9844d8c957725d1f1efa, type: 3}
 --- !u!1001 &7734032593802082721
 PrefabInstance:
