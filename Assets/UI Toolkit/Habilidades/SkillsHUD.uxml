@@ -4,8 +4,8 @@
         <ui:Button text="" name="skill-1" class="skill-button" style="background-image: url(&quot;project://database/Assets/Art/Skills/Skill%20Kick.jpg?fileID=2800000&amp;guid=484136fc3fe701049a9806087bc38938&amp;type=3#Skill Kick&quot;); -unity-background-scale-mode: scale-and-crop; background-color: rgb(0, 55, 55); -unity-background-image-tint-color: rgb(165, 209, 255);">
             <ui:VisualElement name="skill-1-cooldown" class="cooldown-overlay" style="flex-grow: 1; background-color: rgba(95, 51, 132, 0.57);"/>
         </ui:Button>
-        <ui:Button text="" name="skill-2" class="skill-button">
-            <ui:VisualElement name="skill-2-cooldown" class="cooldown-overlay" style="flex-grow: 1;"/>
+        <ui:Button text="" name="skill-2" class="skill-button" style="background-color: rgb(0, 55, 55); background-image: url(&quot;project://database/Assets/Art/Skills/Skill2.jpg?fileID=2800000&amp;guid=f9246ebfce3e2b64e99480cc79692c17&amp;type=3#Skill2&quot;); -unity-background-image-tint-color: rgb(165, 209, 255); -unity-background-scale-mode: scale-and-crop;">
+            <ui:VisualElement name="skill-2-cooldown" class="cooldown-overlay" style="flex-grow: 1; background-color: rgba(95, 51, 132, 0.51);"/>
         </ui:Button>
         <ui:Button text="" name="skill-3" class="skill-button">
             <ui:VisualElement name="skill-3-cooldown" class="cooldown-overlay" style="flex-grow: 1;"/>

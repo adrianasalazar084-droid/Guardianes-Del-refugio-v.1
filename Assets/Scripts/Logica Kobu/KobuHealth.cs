@@ -32,16 +32,9 @@ public class KobuHealth : MonoBehaviour
 
     [Header("Referencias")]
 
-    // Referencia al Animator para reproducir la animación de muerte.
     [SerializeField] private Animator anim;
-
-    // Script encargado del movimiento.
     [SerializeField] private LogicaKobu logicaKobu;
-
-    // Script encargado del ataque.
     [SerializeField] private KobuAttack kobuAttack;
-
-    // Script encargado de colocar nuevamente al jugador en el Spawn.
     [SerializeField] private PlayerRespawn playerRespawn;
 
 
@@ -49,8 +42,6 @@ public class KobuHealth : MonoBehaviour
     {
         vidaActual = vidaTotal;
 
-        // Buscamos automáticamente los componentes si no fueron asignados
-        // desde el Inspector.
         if (anim == null)
             anim = GetComponent<Animator>();
 
@@ -77,27 +68,33 @@ public class KobuHealth : MonoBehaviour
         }
     }
 
-    
+
     /// Restaura la vida del jugador al máximo.
-    
     public void RestaurarVida()
     {
         vidaActual = vidaTotal;
-    
-}
+    }
+
+
+    /// Cura una cantidad fija de vida, sin pasarse del máximo.
+    public void Curar(int cantidad)
+    {
+        vidaActual += cantidad;
+
+        if (vidaActual > vidaTotal)
+        {
+            vidaActual = vidaTotal;
+        }
+    }
 
 
     private void Morir()
     {
         Debug.Log("Kobu ha muerto");
 
-        // Reproducimos la animación de muerte.
         anim.SetTrigger("Death");
 
-        // Desactivamos el movimiento.
         logicaKobu.enabled = false;
-
-        // Desactivamos el ataque.
         kobuAttack.enabled = false;
     }
 }

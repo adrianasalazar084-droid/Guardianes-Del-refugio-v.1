@@ -2769,6 +2769,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 18a1b084ba5c5ba4887a6152f26c8d97, type: 3}
   m_PrefabInstance: {fileID: 123684121}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &131000520 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7062568247302123628, guid: 8e405d70b27f9844d8c957725d1f1efa, type: 3}
+  m_PrefabInstance: {fileID: 6601649920857214023}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &133878957
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9272,10 +9277,10 @@ MonoBehaviour:
         z: 7.2501564
       Rotation:
         value:
-          x: 0.114767715
-          y: 0.24609458
-          z: -0.06531941
-          w: 0.960208
+          x: 0.1147677
+          y: 0.24609454
+          z: -0.0653194
+          w: 0.9602079
     - Position:
         x: -141.53
         y: 14.85
@@ -15140,6 +15145,7 @@ MonoBehaviour:
   skill2CooldownDuration: 8
   skill3CooldownDuration: 12
   skill1Action: {fileID: 6431403872963005137}
+  skill2Action: {fileID: 6431403872963005147}
 --- !u!1 &749296584 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d03b46e93304ed547bb2e326afba3591, type: 3}
@@ -43072,7 +43078,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6268900521926905810, guid: 8e405d70b27f9844d8c957725d1f1efa, type: 3}
   m_PrefabInstance: {fileID: 6601649920857214023}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 131000520}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c7705959e30509d4b88a866528b15a53, type: 3}
@@ -43301,12 +43307,47 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8677630411856844691, guid: 8e405d70b27f9844d8c957725d1f1efa, type: 3}
   m_PrefabInstance: {fileID: 6601649920857214023}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 131000520}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1aba310f54a73d345ac42475890f789c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Skill1Action
+--- !u!114 &6431403872963005144 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 546130473367270044, guid: 8e405d70b27f9844d8c957725d1f1efa, type: 3}
+  m_PrefabInstance: {fileID: 6601649920857214023}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 131000520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07524ead0678ea145a28c7924e504616, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+--- !u!95 &6431403872963005146 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2568275163245689519, guid: 8e405d70b27f9844d8c957725d1f1efa, type: 3}
+  m_PrefabInstance: {fileID: 6601649920857214023}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6431403872963005147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 131000520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7de05af885a1564697b0b109a3921c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Skill2Action
+  animator: {fileID: 6431403872963005146}
+  animatorTriggerName: Skill2
+  kobuAttack: {fileID: 6431403872963005144}
+  kobuHealth: {fileID: 1907758908826311255}
+  cantidadCuracion: 10
+  particulaSkill2: {fileID: 9017484664307500583, guid: 1245b8d2997d5b34fb1637be70a7eb05, type: 3}
+  puntoSkill2: {fileID: 6431403872963005119}
 --- !u!1001 &6601649920857214023
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43446,7 +43487,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7062568247302123628, guid: 8e405d70b27f9844d8c957725d1f1efa, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6431403872963005147}
   m_SourcePrefab: {fileID: 100100000, guid: 8e405d70b27f9844d8c957725d1f1efa, type: 3}
 --- !u!1001 &7734032593802082721
 PrefabInstance:

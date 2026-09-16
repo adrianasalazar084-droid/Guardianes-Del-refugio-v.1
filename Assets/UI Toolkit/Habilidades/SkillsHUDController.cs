@@ -12,6 +12,9 @@ public class SkillsHUDController : MonoBehaviour
     [Header("Script de la habilidad 1")]
     [SerializeField] private Skill1Action skill1Action;
 
+    [Header("Script de la habilidad 2")]
+    [SerializeField] private Skill2Action skill2Action;
+
     private UIDocument document;
 
     private Button skill1;
@@ -22,7 +25,6 @@ public class SkillsHUDController : MonoBehaviour
     private VisualElement skill2Overlay;
     private VisualElement skill3Overlay;
 
-    // Tiempo restante de cooldown de cada habilidad. 0 = lista para usar.
     private float skill1TimeRemaining;
     private float skill2TimeRemaining;
     private float skill3TimeRemaining;
@@ -40,13 +42,15 @@ public class SkillsHUDController : MonoBehaviour
         skill2Overlay = root.Q<VisualElement>("skill-2-cooldown");
         skill3Overlay = root.Q<VisualElement>("skill-3-cooldown");
 
-        // Al arrancar, ninguna habilidad está en cooldown: ocultamos los overlays.
         SetOverlayHeight(skill1Overlay, 0f);
         SetOverlayHeight(skill2Overlay, 0f);
         SetOverlayHeight(skill3Overlay, 0f);
 
         if (skill1Action == null)
             Debug.LogWarning("SkillsHUDController: falta asignar Skill1Action en el Inspector.");
+
+        if (skill2Action == null)
+            Debug.LogWarning("SkillsHUDController: falta asignar Skill2Action en el Inspector.");
     }
 
     private void Update()
@@ -138,8 +142,11 @@ public class SkillsHUDController : MonoBehaviour
         {
             skill1Action?.Execute();
         }
+        else if (index == 2)
+        {
+            skill2Action?.Execute();
+        }
 
-        // Skill 2 y 3 todavía sin script propio - se agregan más adelante
-        // de la misma forma que skill1Action.
+        // Skill 3 todavía sin script propio - se agrega más adelante de la misma forma.
     }
 }
