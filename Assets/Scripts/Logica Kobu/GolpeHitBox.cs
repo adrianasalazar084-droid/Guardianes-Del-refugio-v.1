@@ -7,10 +7,9 @@ public class GolpeHitbox : MonoBehaviour
     [Header("Partícula de impacto")]
     [SerializeField] private GameObject particulaGolpe;
 
-    void Start()
-    {
+    // Si está asignada, se usa en lugar de particulaGolpe (para skills especiales).
+    private GameObject particulaOverride;
 
-    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -39,13 +38,32 @@ public class GolpeHitbox : MonoBehaviour
 
     private void InstanciarParticula(Collider objetivo)
     {
-        if (particulaGolpe == null)
+        GameObject particulaAUsar = (particulaOverride != null) ? particulaOverride : particulaGolpe;
+
+        if (particulaAUsar == null)
             return;
 
-        // Punto más cercano del collider golpeado a la hitbox, para que la partícula
-        // aparezca justo en el punto de contacto en vez del centro del enemigo.
         Vector3 puntoImpacto = objetivo.ClosestPoint(transform.position);
 
-        Instantiate(particulaGolpe, puntoImpacto, Quaternion.identity);
+        Instantiate(particulaAUsar, puntoImpacto, Quaternion.identity);
+    }
+
+
+    /// <summary>
+    /// Reemplaza temporalmente la partícula de impacto (usado por skills especiales).
+    /// Llamar a LimpiarParticulaOverride() cuando termine la ventana de la skill.
+    /// </summary>
+    public void SetParticulaOverride(GameObject particula)
+    {
+        particulaOverride = particula;
+    }
+
+
+    /// <summary>
+    /// Vuelve a usar la partícula normal del golpe.
+    /// </summary>
+    public void LimpiarParticulaOverride()
+    {
+        particulaOverride = null;
     }
 }

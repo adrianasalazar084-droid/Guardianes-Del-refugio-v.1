@@ -11,14 +11,14 @@ public class Skill1Action : MonoBehaviour, ISkillAction
 
     [Header("Partícula propia de la habilidad 1")]
     [SerializeField] private GameObject particulaSkill1;
-    [SerializeField] private Transform puntoSkill1;
+
+    [Header("Hitbox compartida con el golpe normal")]
+    [SerializeField] private GolpeHitbox golpeHitbox;
 
     public void Execute()
     {
         Debug.Log("Habilidad 1 ejecutada");
         PlayAnimation();
-
-        // Acá podés sumar más adelante: daño, sonido, etc.
     }
 
     private void PlayAnimation()
@@ -31,8 +31,6 @@ public class Skill1Action : MonoBehaviour, ISkillAction
 
         animator.SetTrigger(animatorTriggerName);
 
-        // Bloqueamos el movimiento reutilizando la misma bandera que usan los golpes.
-        // Se resetea sola con el Animation Event "DejaDeGolpear" al final del clip Mma Kick.
         if (kobuAttack != null)
         {
             kobuAttack.estoyAtacando = true;
@@ -43,16 +41,25 @@ public class Skill1Action : MonoBehaviour, ISkillAction
         }
     }
 
-    // Animation Event: llamar en el frame exacto donde está activo el hitbox de la skill.
-    public void InstanciarParticulaSkill1()
+    // Animation Event: llamar justo ANTES/al inicio del frame donde se activa el hitbox de la skill.
+    public void ActivarParticulaEspecialSkill1()
     {
-        if (particulaSkill1 != null && puntoSkill1 != null)
+        if (golpeHitbox != null && particulaSkill1 != null)
         {
-            Instantiate(particulaSkill1, puntoSkill1.position, puntoSkill1.rotation);
+            golpeHitbox.SetParticulaOverride(particulaSkill1);
         }
         else
         {
-            Debug.LogWarning("Skill1Action: falta asignar Particula Skill1 o Punto Skill1 en el Inspector.");
+            Debug.LogWarning("Skill1Action: falta asignar GolpeHitbox o Particula Skill1 en el Inspector.");
+        }
+    }
+
+    // Animation Event: llamar justo DESPUÉS del frame donde se desactiva el hitbox de la skill.
+    public void DesactivarParticulaEspecialSkill1()
+    {
+        if (golpeHitbox != null)
+        {
+            golpeHitbox.LimpiarParticulaOverride();
         }
     }
 }

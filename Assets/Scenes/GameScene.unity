@@ -1507,6 +1507,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 90b181d63c9357743961cdfef587f6e0, type: 3}
   m_PrefabInstance: {fileID: 40918402}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &43163026 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 249170312061975249, guid: 8e405d70b27f9844d8c957725d1f1efa, type: 3}
+  m_PrefabInstance: {fileID: 6601649920857214023}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddcc54e20f2385e41bcc2234369b6289, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GolpeHitbox
 --- !u!1001 &44395167
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12375,10 +12386,10 @@ MonoBehaviour:
         z: 7.2501564
       Rotation:
         value:
-          x: 0.1147677
-          y: 0.24609454
-          z: -0.0653194
-          w: 0.9602079
+          x: 0.11476771
+          y: 0.24609455
+          z: -0.06531941
+          w: 0.96020794
     - Position:
         x: -141.53
         y: 14.85
@@ -55964,7 +55975,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6929013191365343745, guid: 0f81b5602b784c643b07193887ffe9fe, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 22.26
+      value: 38.72
       objectReference: {fileID: 0}
     - target: {fileID: 6929013191365343745, guid: 0f81b5602b784c643b07193887ffe9fe, type: 3}
       propertyPath: m_LocalPosition.y
@@ -55972,7 +55983,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6929013191365343745, guid: 0f81b5602b784c643b07193887ffe9fe, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 23.08
+      value: 32.07
       objectReference: {fileID: 0}
     - target: {fileID: 6929013191365343745, guid: 0f81b5602b784c643b07193887ffe9fe, type: 3}
       propertyPath: m_LocalRotation.w
@@ -56216,6 +56227,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8677630411856844691, guid: 8e405d70b27f9844d8c957725d1f1efa, type: 3}
+      propertyPath: golpeHitbox
+      value: 
+      objectReference: {fileID: 43163026}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
