@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class EnemyDetection : MonoBehaviour
 {
@@ -6,18 +7,27 @@ public class EnemyDetection : MonoBehaviour
 
     [SerializeField] private Transform jugador;
 
-
     [SerializeField] private EnemyMovement enemyMovement;
-
     [SerializeField] private KobuHealth kobuHealth;
     [SerializeField] private EnemyHealth enemyHealth;
 
     [Header("Detección")]
 
-
     [SerializeField] private float radioDeteccion = 5f;
     [SerializeField] private float distanciaAtaque = 2f;
     [SerializeField] private EnemyAttack enemyAttack;
+
+    [Header("Sonido de detección")]
+
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip sonidoDeteccion;
+    [Range(0f, 1f)]
+    [SerializeField] private float volumenDeteccion = 0.6f;
+
+    // Tiempo de espera entre una reproducción y la siguiente.
+    [SerializeField] private float intervaloEntreSonidos = 3f;
+
+    private Coroutine sonidoCoroutine;
 
 
     private void Awake()
@@ -35,42 +45,53 @@ public class EnemyDetection : MonoBehaviour
 
         if (enemyHealth == null)
             enemyHealth = GetComponent<EnemyHealth>();
+
+        if (audioSource == null)
+            audioSource = GetComponent<AudioSource>();
+
+        if (audioSource != null)
+        {
+            audioSource.clip = sonidoDeteccion;
+            audioSource.loop = false; // manejamos el loop nosotros, con intervalo
+            audioSource.volume = volumenDeteccion;
+            audioSource.playOnAwake = false;
+        }
     }
 
 
     private void Update()
     {
-        // Si el villano ya empezó a morir, dejamos de perseguir y atacar,
-        // pero sin desactivar el GameObject (la animación y el Animation Event lo destruirán).
         if (enemyHealth != null && enemyHealth.EstaMuerto)
         {
             enemyMovement.Detener();
+            DetenerSonido();
             return;
         }
 
-        // Si Kobu murió, dejamos de perseguir y atacar.
         if (kobuHealth != null && kobuHealth.EstaMuerto)
         {
             enemyMovement.Detener();
+            DetenerSonido();
             return;
         }
 
         if (jugador == null)
-            return;
-
-
-        float distancia = Vector3.Distance(transform.position, jugador.position);
-
-        // Si el jugador está fuera del radio de detección,
-        // el enemigo permanece quieto.
-        if (distancia > radioDeteccion)
         {
-            enemyMovement.Detener();
+            DetenerSonido();
             return;
         }
 
-        // Si el jugador está a distancia de ataque,
-        // dejamos de movernos y atacamos.
+        float distancia = Vector3.Distance(transform.position, jugador.position);
+
+        if (distancia > radioDeteccion)
+        {
+            enemyMovement.Detener();
+            DetenerSonido();
+            return;
+        }
+
+        ReproducirSonido();
+
         if (distancia <= distanciaAtaque)
         {
             enemyMovement.Detener();
@@ -78,15 +99,53 @@ public class EnemyDetection : MonoBehaviour
         }
         else
         {
-            // Si todavía no está a distancia de ataque,
-            // seguimos persiguiéndolo.
             enemyMovement.Perseguir(jugador);
         }
     }
 
+
+    private void ReproducirSonido()
+    {
+        if (audioSource == null || sonidoDeteccion == null)
+            return;
+
+        // Si ya está corriendo el ciclo de reproducción, no arrancamos otro en paralelo.
+        if (sonidoCoroutine == null)
+        {
+            sonidoCoroutine = StartCoroutine(CicloDeSonido());
+        }
+    }
+
+
+    private IEnumerator CicloDeSonido()
+    {
+        while (true)
+        {
+            audioSource.PlayOneShot(sonidoDeteccion, volumenDeteccion);
+
+            // Esperamos la duración del clip + el intervalo configurado antes de repetir.
+            yield return new WaitForSeconds(sonidoDeteccion.length + intervaloEntreSonidos);
+        }
+    }
+
+
+    private void DetenerSonido()
+    {
+        if (sonidoCoroutine != null)
+        {
+            StopCoroutine(sonidoCoroutine);
+            sonidoCoroutine = null;
+        }
+
+        if (audioSource != null && audioSource.isPlaying)
+        {
+            audioSource.Stop();
+        }
+    }
+
+
     private void OnDrawGizmosSelected()
     {
-
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, radioDeteccion);
     }

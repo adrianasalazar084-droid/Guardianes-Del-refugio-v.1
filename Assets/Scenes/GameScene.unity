@@ -3131,6 +3131,10 @@ MonoBehaviour:
   radioDeteccion: 5.8
   distanciaAtaque: 3.43
   enemyAttack: {fileID: 0}
+  audioSource: {fileID: 0}
+  sonidoDeteccion: {fileID: 0}
+  volumenDeteccion: 0.6
+  intervaloEntreSonidos: 3
 --- !u!114 &124450446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12398,7 +12402,7 @@ MonoBehaviour:
         value:
           x: 0.11476771
           y: 0.24609455
-          z: -0.065319404
+          z: -0.06531941
           w: 0.96020794
     - Position:
         x: -141.53
@@ -16803,6 +16807,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 55dcc3fd184900641bb35a1410c0cedf, type: 3}
       insertIndex: -1
       addedObject: {fileID: 863044348}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 55dcc3fd184900641bb35a1410c0cedf, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 863044351}
   m_SourcePrefab: {fileID: 100100000, guid: 55dcc3fd184900641bb35a1410c0cedf, type: 3}
 --- !u!1 &634493187
 GameObject:
@@ -23523,6 +23530,10 @@ MonoBehaviour:
   radioDeteccion: 5.8
   distanciaAtaque: 3.43
   enemyAttack: {fileID: 0}
+  audioSource: {fileID: 863044351}
+  sonidoDeteccion: {fileID: 8300000, guid: d4800420dd08149868ae51ec01601302, type: 3}
+  volumenDeteccion: 0.873
+  intervaloEntreSonidos: 1.3
 --- !u!114 &863044344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23604,6 +23615,103 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyKnockback
   fuerza: 6
   duracion: 0.3
+--- !u!82 &863044351
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 863044335}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1.5
+  MaxDistance: 6
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &865296728 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: c610d54f43e2dee4fab40f58fb6703b2, type: 3}
@@ -51936,22 +52044,22 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2069260182}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 23ae89edcc37744e8a035b754a8feec1, type: 3}
-  m_PlayOnAwake: 1
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
   m_Volume: 0.448
   m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 46
+  Priority: 71
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  MinDistance: 1.5
+  MaxDistance: 5
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -51986,7 +52094,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -52085,6 +52193,10 @@ MonoBehaviour:
   radioDeteccion: 5
   distanciaAtaque: 4
   enemyAttack: {fileID: 0}
+  audioSource: {fileID: 0}
+  sonidoDeteccion: {fileID: 0}
+  volumenDeteccion: 0.6
+  intervaloEntreSonidos: 3
 --- !u!114 &2075263632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56136,6 +56248,18 @@ PrefabInstance:
       propertyPath: jugador
       value: 
       objectReference: {fileID: 6431403872963005119}
+    - target: {fileID: 8495427031577542219, guid: 0f81b5602b784c643b07193887ffe9fe, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 2069260195}
+    - target: {fileID: 8495427031577542219, guid: 0f81b5602b784c643b07193887ffe9fe, type: 3}
+      propertyPath: sonidoDeteccion
+      value: 
+      objectReference: {fileID: 8300000, guid: 23ae89edcc37744e8a035b754a8feec1, type: 3}
+    - target: {fileID: 8495427031577542219, guid: 0f81b5602b784c643b07193887ffe9fe, type: 3}
+      propertyPath: intervaloEntreSonidos
+      value: 1.3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -56289,6 +56413,10 @@ PrefabInstance:
       propertyPath: 'sonidosPasos.Array.data[1]'
       value: 
       objectReference: {fileID: 8300000, guid: 53e2adf2ac488ef46bb2b4074de9e363, type: 3}
+    - target: {fileID: 4444022544756431124, guid: 8e405d70b27f9844d8c957725d1f1efa, type: 3}
+      propertyPath: Priority
+      value: 256
+      objectReference: {fileID: 0}
     - target: {fileID: 5173269096798064030, guid: 8e405d70b27f9844d8c957725d1f1efa, type: 3}
       propertyPath: m_Size.x
       value: 6.66036
