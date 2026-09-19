@@ -6,11 +6,7 @@ public class KobuAttack : MonoBehaviour
 
     public bool estoyAtacando;
 
-    // Alterna entre golpe izquierdo y derecho
     private bool siguienteGolpeDerecho = false;
-
-    public GameObject particulaGolpe;
-    public Transform puntoGolpe;
 
     void Start()
     {
@@ -23,12 +19,10 @@ public class KobuAttack : MonoBehaviour
         {
             if (siguienteGolpeDerecho)
             {
-
                 anim.SetTrigger("Rightpunch");
             }
             else
             {
-
                 anim.SetTrigger("golpe");
             }
 
@@ -37,19 +31,9 @@ public class KobuAttack : MonoBehaviour
         }
     }
 
-    // Animation Event: Instancia la partícula del golpe
-    public void InstanciarParticulaGolpe()
-    {
-        if (particulaGolpe != null && puntoGolpe != null)
-        {
-            Instantiate(particulaGolpe, puntoGolpe.position, puntoGolpe.rotation);
-        }
-    }
-
-    // Animation Event: Se llama al final de la animación
+    // Animation Event: se llama al final de la animación
     public void DejaDeGolpear()
     {
-
         estoyAtacando = false;
     }
 }

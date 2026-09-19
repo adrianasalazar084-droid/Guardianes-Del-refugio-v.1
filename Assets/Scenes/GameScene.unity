@@ -56084,6 +56084,10 @@ PrefabInstance:
       propertyPath: playerSpawn
       value: 
       objectReference: {fileID: 1826279397}
+    - target: {fileID: 249170312061975249, guid: 8e405d70b27f9844d8c957725d1f1efa, type: 3}
+      propertyPath: particulaGolpe
+      value: 
+      objectReference: {fileID: 6823302871133167919, guid: 3138a83bedbd6ad4481ba0b061da2eb6, type: 3}
     - target: {fileID: 467896026514781190, guid: 8e405d70b27f9844d8c957725d1f1efa, type: 3}
       propertyPath: velocidad
       value: 1.4
@@ -56144,6 +56148,10 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.00000003155121
       objectReference: {fileID: 0}
+    - target: {fileID: 3682959490511794221, guid: 8e405d70b27f9844d8c957725d1f1efa, type: 3}
+      propertyPath: particulaGolpe
+      value: 
+      objectReference: {fileID: 5603006198383639307, guid: 8f6a9d2ab3c1e744d8162f7419631a61, type: 3}
     - target: {fileID: 5173269096798064030, guid: 8e405d70b27f9844d8c957725d1f1efa, type: 3}
       propertyPath: m_Size.x
       value: 6.66036
