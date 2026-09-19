@@ -209,6 +209,8 @@ MonoBehaviour:
   umbralVelocidad: 0.05
   tiempoQuieta: 0.2
   gemsAnim: {fileID: 0}
+  sonidoAparecer: {fileID: 8300000, guid: 0b5de865586844050b285d4a3fd6b033, type: 3}
+  volumenAparecer: 0.7
 --- !u!114 &1397949302144476253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -221,3 +223,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6040b615b1152f45971cbca19a027a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RecogerMoneda
+  sonidoRecoger: {fileID: 8300000, guid: 7e154b08d67ba4bfab784907698276ac, type: 3}
+  volumenRecoger: 0.957

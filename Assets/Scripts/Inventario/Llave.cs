@@ -11,13 +11,15 @@ public class Llave : MonoBehaviour
     public float fuerzaGiro = 5f;
 
     [Header("Asentamiento")]
-    // Velocidad por debajo de la cual consideramos que ya está quieta.
     public float umbralVelocidad = 0.05f;
-    // Tiempo que debe mantenerse quieta antes de congelarla (evita falsos positivos en el aire).
     public float tiempoQuieta = 0.3f;
 
     [Header("Referencias")]
     public SimpleGemsAnim gemsAnim;
+
+    [Header("Sonido")]
+    public AudioClip sonidoAparecer;
+    [Range(0f, 1f)] public float volumenAparecer = 0.7f;
 
     private Rigidbody rb;
 
@@ -45,6 +47,12 @@ public class Llave : MonoBehaviour
         rb.AddForce(impulso, ForceMode.Impulse);
         rb.AddTorque(Random.insideUnitSphere * fuerzaGiro, ForceMode.Impulse);
 
+        // Sonido al aparecer.
+        if (sonidoAparecer != null)
+        {
+            AudioSource.PlayClipAtPoint(sonidoAparecer, transform.position, volumenAparecer);
+        }
+
         StartCoroutine(EsperarAsentamiento());
     }
 
@@ -52,8 +60,6 @@ public class Llave : MonoBehaviour
     {
         float tiempoQuietaAcumulado = 0f;
 
-        // Esperamos un instante antes de empezar a chequear,
-        // para que el impulso inicial no se detecte como "ya quieta".
         yield return new WaitForSeconds(0.2f);
 
         while (tiempoQuietaAcumulado < tiempoQuieta)
