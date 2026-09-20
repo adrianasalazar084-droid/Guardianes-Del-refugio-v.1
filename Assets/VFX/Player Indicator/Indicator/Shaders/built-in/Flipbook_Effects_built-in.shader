@@ -274,7 +274,7 @@ Shader "FX_Kandol_Pack/Flipbook_Effects"
 			}
 		}	
 	}
-	CustomEditor "ASEMaterialInspector"
+	//CustomEditor "ASEMaterialInspector"
 	
 	
 }
