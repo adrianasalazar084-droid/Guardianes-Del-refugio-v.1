@@ -1,4 +1,5 @@
 using UnityEngine;
+using Unity.Cinemachine;
 
 public class KobuHealth : MonoBehaviour
 {
@@ -6,28 +7,19 @@ public class KobuHealth : MonoBehaviour
 
     public int VidaActual
     {
-        get
-        {
-            return vidaActual;
-        }
+        get { return vidaActual; }
     }
 
     [SerializeField] private int vidaTotal = 100;
 
     public bool EstaMuerto
     {
-        get
-        {
-            return vidaActual <= 0;
-        }
+        get { return vidaActual <= 0; }
     }
 
     public int VidaTotal
     {
-        get
-        {
-            return vidaTotal;
-        }
+        get { return vidaTotal; }
     }
 
     [Header("Referencias")]
@@ -36,6 +28,11 @@ public class KobuHealth : MonoBehaviour
     [SerializeField] private LogicaKobu logicaKobu;
     [SerializeField] private KobuAttack kobuAttack;
     [SerializeField] private PlayerRespawn playerRespawn;
+
+    [Header("Feedback de daño recibido")]
+
+    [SerializeField] private PlayerFlash playerFlash;
+    [SerializeField] private CinemachineImpulseSource impulseSource;
 
 
     void Start()
@@ -53,12 +50,36 @@ public class KobuHealth : MonoBehaviour
 
         if (playerRespawn == null)
             playerRespawn = GetComponent<PlayerRespawn>();
+
+        if (playerFlash == null)
+            playerFlash = GetComponent<PlayerFlash>();
+
+        if (impulseSource == null)
+            impulseSource = GetComponent<CinemachineImpulseSource>();
     }
 
 
     public void RecibirDaño(int daño)
     {
         vidaActual -= daño;
+
+        // Flash del modelo.
+        if (playerFlash != null)
+        {
+            playerFlash.Flash();
+        }
+
+        // Viñeta roja en pantalla.
+        if (DamageVignette.Instancia != null)
+        {
+            DamageVignette.Instancia.Mostrar();
+        }
+
+        // Camera shake.
+        if (impulseSource != null)
+        {
+            impulseSource.GenerateImpulse();
+        }
 
         if (vidaActual <= 0)
         {
@@ -69,14 +90,12 @@ public class KobuHealth : MonoBehaviour
     }
 
 
-    /// Restaura la vida del jugador al máximo.
     public void RestaurarVida()
     {
         vidaActual = vidaTotal;
     }
 
 
-    /// Cura una cantidad fija de vida, sin pasarse del máximo.
     public void Curar(int cantidad)
     {
         vidaActual += cantidad;
