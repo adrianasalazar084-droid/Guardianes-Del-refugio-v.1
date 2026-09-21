@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class LogicaKobu : MonoBehaviour
 {
-    public float velocidad = 1.3f;
-    public float velocidadCorrer = 2.6f;
-    public float velocidadRotacion = 80f;
+    public float velocidad = 1.8f;
+    public float velocidadCorrer = 2.8f;
+    public float velocidadRotacion = 150f;
 
     private Animator anim;
 

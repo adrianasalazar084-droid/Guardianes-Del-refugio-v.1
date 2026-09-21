@@ -12400,10 +12400,10 @@ MonoBehaviour:
         z: 7.2501564
       Rotation:
         value:
-          x: 0.114767715
-          y: 0.24609458
-          z: -0.06531941
-          w: 0.960208
+          x: 0.1147677
+          y: 0.24609454
+          z: -0.0653194
+          w: 0.9602079
     - Position:
         x: -141.53
         y: 14.85
@@ -56629,15 +56629,19 @@ PrefabInstance:
       objectReference: {fileID: 6823302871133167919, guid: 3138a83bedbd6ad4481ba0b061da2eb6, type: 3}
     - target: {fileID: 467896026514781190, guid: 8e405d70b27f9844d8c957725d1f1efa, type: 3}
       propertyPath: velocidad
-      value: 1.4
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 467896026514781190, guid: 8e405d70b27f9844d8c957725d1f1efa, type: 3}
       propertyPath: fuerzaDeSalto
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 467896026514781190, guid: 8e405d70b27f9844d8c957725d1f1efa, type: 3}
+      propertyPath: velocidadCorrer
+      value: 2.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 467896026514781190, guid: 8e405d70b27f9844d8c957725d1f1efa, type: 3}
       propertyPath: velocidadRotacion
-      value: 100
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 546130473367270044, guid: 8e405d70b27f9844d8c957725d1f1efa, type: 3}
       propertyPath: particulaGolpe
