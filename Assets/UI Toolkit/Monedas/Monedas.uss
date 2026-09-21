@@ -1,0 +1,35 @@
+VisualElement {}/* Contenedor principal anclado a la esquina superior izquierda o derecha */
+.root-container {
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    top: 20px;
+    left: 20px; /* Cambia a 'right: 20px;' si prefieres la esquina derecha */
+}
+
+/* Contenedor del contador */
+.coin-container {
+    flex-direction: row;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4); /* Fondo semitransparente opcional estilo HUD */
+    border-radius: 8px;
+    padding: 8px 12px;
+}
+
+/* Icono de la moneda */
+.coin-icon {
+    width: 32px;
+    height: 32px;
+    -unity-background-scale-mode: scale-to-fit;
+    /* Asegura que se vea pixelado */
+    -unity-font-definition: initial; 
+}
+
+/* Estilo de texto para que luzca arcade/pixel */
+.coin-label {
+    font-size: 24px;
+    color: white;
+    -unity-font-style: bold;
+    margin-left: 8px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.8);
+}
