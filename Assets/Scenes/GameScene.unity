@@ -6402,6 +6402,67 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2424214146224596469, guid: 1433fa7d59e31684d90afbf730a17596, type: 3}
   m_PrefabInstance: {fileID: 563889763}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &213029185
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7548825993834958483, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: jugador
+      value: 
+      objectReference: {fileID: 6431403872963005119}
+    - target: {fileID: 8391142602156704052, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -137.21378
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391142602156704052, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.74000055
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391142602156704052, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 98.35183
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391142602156704052, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7520166
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391142602156704052, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391142602156704052, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.65914416
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391142602156704052, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391142602156704052, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391142602156704052, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 82.469
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391142602156704052, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9167221153092262798, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_Name
+      value: VillanoForest Pose T (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
 --- !u!1001 &213500548
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7409,6 +7470,67 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.4400003, y: 0.92329794, z: 1.1000003}
   m_Center: {x: 0, y: 0.46164897, z: 0}
+--- !u!1001 &255355686
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7548825993834958483, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: jugador
+      value: 
+      objectReference: {fileID: 6431403872963005119}
+    - target: {fileID: 8391142602156704052, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -153.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391142602156704052, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.74000055
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391142602156704052, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 102.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391142602156704052, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7520166
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391142602156704052, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391142602156704052, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.65914416
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391142602156704052, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391142602156704052, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391142602156704052, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 82.469
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391142602156704052, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9167221153092262798, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_Name
+      value: VillanoForest Pose T (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
 --- !u!1001 &255462394
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8832,7 +8954,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 294158942}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.43110043, y: 0.022988074, z: -0.0109875575, w: 0.9019442}
+  m_LocalRotation: {x: 0.43110058, y: 0.02298803, z: -0.0109875575, w: 0.90194416}
   m_LocalPosition: {x: 83.6902, y: 4.2094326, z: 62.721794}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -9484,6 +9606,67 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8365489436768743466, guid: d72cf06c89f8ae841a2cbc752df8273b, type: 3}
   m_PrefabInstance: {fileID: 8114635162801336530}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &329397141
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7548825993834958483, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: jugador
+      value: 
+      objectReference: {fileID: 6431403872963005119}
+    - target: {fileID: 8391142602156704052, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -143.47961
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391142602156704052, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.74000055
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391142602156704052, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 115.961754
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391142602156704052, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9221049
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391142602156704052, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391142602156704052, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.38693988
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391142602156704052, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391142602156704052, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391142602156704052, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 45.528
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391142602156704052, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9167221153092262798, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_Name
+      value: VillanoForest Pose T (6)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
 --- !u!1 &329687719
 GameObject:
   m_ObjectHideFlags: 0
@@ -12704,10 +12887,10 @@ MonoBehaviour:
         z: 7.2501564
       Rotation:
         value:
-          x: 0.11476771
-          y: 0.24609455
+          x: 0.114767715
+          y: 0.24609458
           z: -0.06531941
-          w: 0.96020794
+          w: 0.960208
     - Position:
         x: -141.53
         y: 14.85
@@ -43413,6 +43596,67 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c53ef0df3e3731e4d8be95f6e41406ff, type: 3}
+--- !u!1001 &1419440738
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7548825993834958483, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: jugador
+      value: 
+      objectReference: {fileID: 6431403872963005119}
+    - target: {fileID: 8391142602156704052, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -125.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391142602156704052, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.74000055
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391142602156704052, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 94.76
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391142602156704052, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9752892
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391142602156704052, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391142602156704052, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.22093208
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391142602156704052, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391142602156704052, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391142602156704052, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 25.528
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391142602156704052, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9167221153092262798, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_Name
+      value: VillanoForest Pose T (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
 --- !u!4 &1421964847 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7753663767946982684, guid: 303bcddb5a4903b4f8e8792be0982441, type: 3}
@@ -45715,6 +45959,67 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 124450440}
   m_SourcePrefab: {fileID: 100100000, guid: 55dcc3fd184900641bb35a1410c0cedf, type: 3}
+--- !u!1001 &1508433134
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7548825993834958483, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: jugador
+      value: 
+      objectReference: {fileID: 6431403872963005119}
+    - target: {fileID: 8391142602156704052, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -156.356
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391142602156704052, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.862
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391142602156704052, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 93.462
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391142602156704052, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.99892914
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391142602156704052, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391142602156704052, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.046266954
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391142602156704052, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391142602156704052, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391142602156704052, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 5.304
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391142602156704052, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9167221153092262798, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_Name
+      value: VillanoForest Pose T (4)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
 --- !u!1001 &1509640185
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53259,6 +53564,67 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1827555755
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7548825993834958483, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: jugador
+      value: 
+      objectReference: {fileID: 6431403872963005119}
+    - target: {fileID: 8391142602156704052, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -159.40657
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391142602156704052, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.74000055
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391142602156704052, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 114.74737
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391142602156704052, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.8716041
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391142602156704052, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391142602156704052, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.49021065
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391142602156704052, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391142602156704052, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391142602156704052, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 58.709
+      objectReference: {fileID: 0}
+    - target: {fileID: 8391142602156704052, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9167221153092262798, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
+      propertyPath: m_Name
+      value: VillanoForest Pose T (5)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4b6828e1fa36ac949b3097f25e7cf06b, type: 3}
 --- !u!1001 &1828932615
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -63972,14 +64338,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerStamina
   hud: {fileID: 826188062}
-  agent: {fileID: 0}
+  animator: {fileID: 0}
   maxStamina: 100
   drainPerSecond: 20
   regenPerSecond: 15
   regenDelay: 1
-  minToRunAgain: 20
-  walkSpeed: 3.5
-  runSpeed: 6
+  exhaustedRegenDelay: 4
+  minToActAgain: 20
+  dashKey: 51
+  dashCost: 25
 --- !u!1001 &6601649920857214023
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -64016,6 +64383,34 @@ PrefabInstance:
       propertyPath: textoLlaves
       value: 
       objectReference: {fileID: 537731431}
+    - target: {fileID: 3258759040858569056, guid: 8e405d70b27f9844d8c957725d1f1efa, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.000012341835
+      objectReference: {fileID: 0}
+    - target: {fileID: 3258759040858569056, guid: 8e405d70b27f9844d8c957725d1f1efa, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 95.99703
+      objectReference: {fileID: 0}
+    - target: {fileID: 3258759040858569056, guid: 8e405d70b27f9844d8c957725d1f1efa, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -68.36795
+      objectReference: {fileID: 0}
+    - target: {fileID: 3258759040858569056, guid: 8e405d70b27f9844d8c957725d1f1efa, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.90223706
+      objectReference: {fileID: 0}
+    - target: {fileID: 3258759040858569056, guid: 8e405d70b27f9844d8c957725d1f1efa, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.43124056
+      objectReference: {fileID: 0}
+    - target: {fileID: 3258759040858569056, guid: 8e405d70b27f9844d8c957725d1f1efa, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.000000098645856
+      objectReference: {fileID: 0}
+    - target: {fileID: 3258759040858569056, guid: 8e405d70b27f9844d8c957725d1f1efa, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.000000035846654
+      objectReference: {fileID: 0}
     - target: {fileID: 3682959490511794221, guid: 8e405d70b27f9844d8c957725d1f1efa, type: 3}
       propertyPath: "da\xF1o"
       value: 30
@@ -64263,6 +64658,12 @@ SceneRoots:
   - {fileID: 292162512}
   - {fileID: 1048093185}
   - {fileID: 413127326}
+  - {fileID: 329397141}
+  - {fileID: 213029185}
+  - {fileID: 255355686}
+  - {fileID: 1827555755}
+  - {fileID: 1508433134}
+  - {fileID: 1419440738}
   - {fileID: 2012694896}
   - {fileID: 1241116901}
   - {fileID: 1099391015}
