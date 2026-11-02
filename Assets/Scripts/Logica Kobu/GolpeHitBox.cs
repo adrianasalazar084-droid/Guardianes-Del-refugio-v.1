@@ -4,11 +4,25 @@ public class GolpeHitbox : MonoBehaviour
 {
     [SerializeField] private int daño = 30;
 
+    [Header("Multiplicador de daño")]
+    [Tooltip("Se busca solo en Kobu. Asignalo a mano si este hitbox no es hijo de Kobu.")]
+    [SerializeField] private KobuDamage kobuDamage;
+
     [Header("Partícula de impacto")]
     [SerializeField] private GameObject particulaGolpe;
 
     // Si está asignada, se usa en lugar de particulaGolpe (para skills especiales).
     private GameObject particulaOverride;
+
+
+    private void Awake()
+    {
+        if (kobuDamage == null)
+            kobuDamage = GetComponentInParent<KobuDamage>();
+
+        if (kobuDamage == null)
+            kobuDamage = FindFirstObjectByType<KobuDamage>();
+    }
 
 
     private void OnTriggerEnter(Collider other)
@@ -18,7 +32,10 @@ public class GolpeHitbox : MonoBehaviour
 
         if (enemyHealth != null)
         {
-            enemyHealth.RecibirDaño(daño, transform.position);
+            // El daño base se multiplica por el boost de la skill 3 y las mejoras permanentes
+            int dañoFinal = (kobuDamage != null) ? kobuDamage.Calcular(daño) : daño;
+
+            enemyHealth.RecibirDaño(dañoFinal, transform.position);
 
             InstanciarParticula(other);
             return;
